@@ -6,8 +6,19 @@ namespace Algorithms.LinkedList
 {
     public class Node
     {
-        public Node next;
+        public Node next { get; set; }
 
-        public Object data;
+        public Object data { get; set; }
+
+        public Node()
+        {
+
+        }
+
+        public Node(int value)
+        {
+            data = value;
+        }
     }
 }
+

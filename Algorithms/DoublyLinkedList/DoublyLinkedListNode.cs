@@ -6,10 +6,10 @@ namespace Algorithms.DoublyLinkedList
 {
     public class DoublyLinkedListNode
     {
-        public DoublyLinkedListNode next;
+        public DoublyLinkedListNode next { get; set; }
 
-        public DoublyLinkedListNode prev;
+        public DoublyLinkedListNode prev { get; set; }
 
-        public Object data;
+        public Object data { get; set; }
     }
 }
