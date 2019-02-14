@@ -12,12 +12,12 @@ namespace Algorithms.Data_Structures.Hash_Tables
 
         int _count;
 
-        HashTableArray<TKey, TValue> _array;
+        //HashTableArray<TKey, TValue> _array;
 
-        public HashTable()
-            : this(1000)
-        {
+        //public HashTable()
+        //    : this(1000)
+        //{
 
-        }
+        //}
     }
 }

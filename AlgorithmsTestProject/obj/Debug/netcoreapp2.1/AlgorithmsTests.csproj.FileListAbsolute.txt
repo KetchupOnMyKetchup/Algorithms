@@ -1,3 +1,7 @@
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.csprojAssemblyReference.cache
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.csproj.CoreCompileInputs.cache
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.AssemblyInfoInputs.cache
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.AssemblyInfo.cs
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -6,12 +10,8 @@ C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\AlgorithmsTests.runt
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\AlgorithmsTests.runtimeconfig.dev.json
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\AlgorithmsTests.dll
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\AlgorithmsTests.pdb
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.csprojAssemblyReference.cache
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.csproj.CoreCompileInputs.cache
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.AssemblyInfoInputs.cache
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.AssemblyInfo.cs
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.dll
-C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.pdb
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\Algorithms.dll
 C:\Algorithms\AlgorithmsTestProject\bin\Debug\netcoreapp2.1\Algorithms.pdb
 C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.csproj.CopyComplete
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.dll
+C:\Algorithms\AlgorithmsTestProject\obj\Debug\netcoreapp2.1\AlgorithmsTests.pdb

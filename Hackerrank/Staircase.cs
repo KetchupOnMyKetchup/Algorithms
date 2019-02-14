@@ -13,11 +13,13 @@ namespace Hackerrank
 
             if (++i <= n) Staircase_Problem(n, i);
         }
+        //static void Main(string[] args)
+        //{
+            // for main
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //staircase(n);
 
-        // for main
-        //int n = Convert.ToInt32(Console.ReadLine());
-        //staircase(n);
-
-        //Console.ReadLine();
+            //Console.ReadLine();
+        //}
     }
 }
