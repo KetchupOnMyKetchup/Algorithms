@@ -7,6 +7,7 @@ namespace Hackerrank
     // https://www.hackerrank.com/challenges/time-conversion/problem
     class TimeConversion
     {
+        // alternative method: could have parsed it to a Datetime and outputted it to military time
         static string timeConversion_problem(string s)
         {
             // Parse if AM or PM
