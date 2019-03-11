@@ -24,10 +24,9 @@ namespace Hackerrank
     {
         
 
-
         static void Main(string[] args)
         {
-            
+       
         }
     }
 
