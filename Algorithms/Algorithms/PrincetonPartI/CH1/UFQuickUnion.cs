@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Algorithms.Algorithms.PrincetonPartI
 {
+    /// <summary>
+    /// Faster than QuickFindUF, but still too slow.
+    /// Too expensive becuase trees can get too tall or too flat (extremes).
+    /// </summary>
     public class QuickUnionUF
     {
         private int[] id;
@@ -21,7 +25,7 @@ namespace Algorithms.Algorithms.PrincetonPartI
             return i;
         }
 
-        public bool Connected(int p, int q)
+        public bool Connected(int p, int q) // Find
         {
             return Root(p) == Root(q);
         }

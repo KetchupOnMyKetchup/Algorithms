@@ -21,7 +21,7 @@ namespace Algorithms.Algorithms.PrincetonPartI
             for (int i = 0; i < N; i++) id[i] = i;
         }
 
-        public bool Connected(int p, int q)
+        public bool Connected(int p, int q) // Find
         {
             return id[p] == id[q];
         }
