@@ -4,6 +4,13 @@ using System.Text;
 
 namespace Algorithms.Algorithms.PrincetonPartI
 {
+    /// <summary>
+    /// Initialize: N
+    /// Union: N
+    /// Find: 1
+    /// Accesses: takes N^2 accesses to process sequence of N union commands on N objects
+    /// Summary: Union is too expensive. Too slow for huge problems. Quick union will be a little faster. 
+    /// </summary>
     public class QuickFindUF
     {
         private int[] id;
@@ -11,7 +18,6 @@ namespace Algorithms.Algorithms.PrincetonPartI
         public QuickFindUF(int N)
         {
             id = new int[N];
-
             for (int i = 0; i < N; i++) id[i] = i;
         }
 
