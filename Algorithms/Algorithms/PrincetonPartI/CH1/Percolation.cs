@@ -32,31 +32,23 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH1
 
             // if top column, connect to -1
             if (col == 0) uf.Union(ConvertCoordinateToInt(row, col), -1);
-            
+
             // if bottom column, connect to -2
             if (col == _n) uf.Union(ConvertCoordinateToInt(row, col), -2);
 
             // union
-            if (grid[row, col - 1] == OPEN)
-            {
-                uf.Union(ConvertCoordinateToInt(row, col), ConvertCoordinateToInt(row, col - 1));
-            }
+            CheckAllSides(row, col, row, col - 1);
+            CheckAllSides(row, col, row, col + 1);
+            CheckAllSides(row, col, row + 1, col);
+            CheckAllSides(row, col, row - 1, col);
+        }
 
-            if (grid[row, col + 1] == OPEN)
+        private void CheckAllSides(int row1, int col1, int row2, int col2)
+        {
+            if (row2 >= 0 && col2 >=0 && row2 <= _n && col2 <= _n && grid[row2, col2] == OPEN)
             {
-                uf.Union(ConvertCoordinateToInt(row, col), ConvertCoordinateToInt(row, col + 1));
+                uf.Union(ConvertCoordinateToInt(row1, col1), ConvertCoordinateToInt(row2, col2));
             }
-
-            if (grid[row - 1, col] == OPEN)
-            {
-                uf.Union(ConvertCoordinateToInt(row - 1, col), ConvertCoordinateToInt(row, col));
-            }
-
-            if (grid[row + 1, col] == OPEN)
-            {
-                uf.Union(ConvertCoordinateToInt(row + 1, col), ConvertCoordinateToInt(row, col));
-            }
-
         }
 
         private int ConvertCoordinateToInt(int row, int col)
