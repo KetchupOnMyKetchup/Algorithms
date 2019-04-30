@@ -14,12 +14,14 @@ namespace Algorithms.Algorithms.PrincetonPartI
     /// If N is 1,000,000,000 its 30 (2^30)
     /// Can also add path conpression: just after computing root of p, 
     /// set the id of each examined node to point to that root
+    /// Memory analysis: total of 8n + 88 bytes = ~8n bytes 
     /// </summary>
-    public class QuickUnionUF2 // Weighted Quick Union
+    public class QuickUnionUF2 // Weighted Quick Union, 16 bytes object overhead
     {
-        private int[] id;
-        private int[] sz;
-        private int count; // number of components
+        private int[] id; // 4n + 24 memory
+        private int[] sz; // 4n + 24 memory
+        private int count; // number of components. 4 bytes for int
+        // 4 bytes padding
 
         public QuickUnionUF2(int N)
         {

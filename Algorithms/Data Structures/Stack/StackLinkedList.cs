@@ -6,9 +6,12 @@ using Algorithms.LinkedList;
 namespace Algorithms.Stack
 {
     //https://www.geeksforgeeks.org/implement-a-stack-using-singly-linked-list/
-    public class StackLinkedList
+    // A stack with N items uses ~40N bytes
+    public class StackLinkedList // 16 bytes overhead
     {
-        Node top;
+        Node top; // 8 bytes for Node inner class overhead + 8 bytes to node reference
+        // Node.value 8 bytes reference to string
+        // Node.next 8 bytes reference to next node
 
         public StackLinkedList()
         {
