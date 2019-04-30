@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Algorithms.Stack
 {
+    /// <summary>
+    /// Capacity must be declared ahead of time. 
+    /// Defect: occurs when N exceeds capacity.
+    /// </summary>
     //https://www.geeksforgeeks.org/implementing-stack-c-sharp/
     class StackArray
     {
