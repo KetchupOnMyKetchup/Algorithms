@@ -4,13 +4,9 @@ using System.Text;
 
 namespace Algorithms.Algorithms.PrincetonPartI.CH2
 {
-    /// <summary>
-    /// ~40N bytes
-    /// **Slower and more wasted space than the array version. But each individual operation is faster.
-    /// </summary>
-    public class LinkedStackOfStrings // 16 bytes object overhead
+    public class LinkedQueueOfStrings
     {
-        private Node first = null;
+        private Node first, last;
 
         private class Node // 8 bytes inner class overhead
         {
@@ -23,18 +19,24 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH2
             return first == null;
         }
 
-        public void Push(string item)
+        public void Enqueue(string item)
         {
-            Node oldFirst = first;
-            first = new Node();
-            first.item = item;
-            first.next = oldFirst;
+            Node oldlast = last;
+            last = new Node
+            {
+                item = item,
+                next = null
+            };
+
+            if (IsEmpty()) first = last; // special cases for empty queue
+            else oldlast.next = last;
         }
 
-        public string Pop()
+        public string Dequeue()
         {
             string item = first.item;
             first = first.next;
+            if (IsEmpty()) last = null; // special cases for empty queue
             return item;
         }
     }
