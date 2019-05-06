@@ -5,10 +5,14 @@ using System.Text;
 namespace Algorithms.Algorithms.PrincetonPartI.CH2
 {
     /// <summary>
-    /// find smallest entry in array, swap it to leftmost position.
-    /// find next smallest to the right of the sorted smallest item, etc.
+    /// 1st card: compare card to card on the right so in ascending order.
+    /// 2nd and onwards: compare with card(s) to the left, swap until in ascending order. 
+    /// pointer scans left to right
+    /// ~1/4 N^2 compares and ~1/4 N^2 exchanges on average
+    /// Best case: N-1 compares and 0 exchanges (better than a selction sort)
+    /// Worst case: ~1/2 N^2 compares and ~1/2 N^2 exchanges (worse than a selection sort)
     /// </summary>
-    public class SelectionSort
+    public class InsertionSort
     {
         public static void Sort(IComparable[] a)
         {
@@ -16,13 +20,10 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH2
 
             for (int i = 0; i < N; i++)
             {
-                int min = i;
-
-                for (int j = 0; j < i + 1; j++)
+                for (int j = i; j < 0; j--)
                 {
-                    if (less(a[j], a[min])) min = j;
-
-                    exch(a, i, min);
+                    if (less(a[j], a[j - 1]))
+                    exch(a, j, j - 1);
                 }
             }
         }
