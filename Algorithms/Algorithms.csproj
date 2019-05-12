@@ -8,6 +8,7 @@
   <ItemGroup>
     <Folder Include="Algorithms\AVL Tree\" />
     <Folder Include="Algorithms\Collection Concurrency\" />
+    <Folder Include="Algorithms\PrincetonPartI\CH4\" />
     <Folder Include="Algorithms\String Search\" />
     <Folder Include="Algorithms\Set Collection\" />
     <Folder Include="Algorithms\Sorting\" />

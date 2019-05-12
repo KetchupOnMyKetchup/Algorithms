@@ -13,6 +13,11 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH3
     /// 
     /// Mergesort is optimal with # compares (N log N for both upper and lower bound).
     /// Mergesort is NOT optimal with respect to space usage.
+    /// 
+    /// Stability: If you sort by 1 column, then sort by a 2nd.. stability is if it preserves both sorts. 
+    /// 
+    /// Insertion sort and Mergesort and stable. They never move equal items past each other, so preserve first set of sorted columns. 
+    /// Selection sort and Shellsort are not. Long distance exchanges moving keys past other keys that could be equal. 
     /// </summary>
     class Ch3Notes
     {
