@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithms.Algorithms.PrincetonPartII
+namespace Algorithms.Algorithms.PrincetonPartII.CH4
 {
-    class SubstringSearch
+    class Tries
     {
     }
 }
