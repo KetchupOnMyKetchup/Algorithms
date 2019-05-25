@@ -15,7 +15,7 @@ namespace Algorithms.Algorithms.PrincetonPartI
     /// Is not "stable" with default implementation, but can be made so. 
     /// Too much overhead for small subarrys. Do insertion sort for smaller arrays (10 or less items)
     /// </summary>
-    class QuickSort
+    public class QuickSort
     {
         public static void sort(IComparable[] a)
         {

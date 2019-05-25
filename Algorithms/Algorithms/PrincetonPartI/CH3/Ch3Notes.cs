@@ -18,6 +18,9 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH3
     /// 
     /// Insertion sort and Mergesort and stable. They never move equal items past each other, so preserve first set of sorted columns. 
     /// Selection sort and Shellsort are not. Long distance exchanges moving keys past other keys that could be equal. 
+    /// 
+    /// Primitives can be sorted by their type.. so make a class just for int sort for example.
+    /// Why? This is faster if performance is the most important and reusability isn't a big deal. 
     /// </summary>
     class Ch3Notes
     {

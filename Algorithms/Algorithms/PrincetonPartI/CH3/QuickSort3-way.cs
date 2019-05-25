@@ -6,6 +6,7 @@ namespace Algorithms.Algorithms.PrincetonPartI
 {
     /// <summary>
     /// Handles sorting with multiple duplicates.
+    /// In general, performs well in many scenarios but very slightly slower than regular QuickSort if there aren't many duplicates.
     /// Regular QuickSort is quadratic with multiple duplicates which is awful.
     /// Duplicate Keys https://www.coursera.org/learn/algorithms-part1/lecture/XvjPd/duplicate-keys 4:20
     /// </summary>
