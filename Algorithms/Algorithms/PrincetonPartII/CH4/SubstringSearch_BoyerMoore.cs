@@ -5,6 +5,8 @@ using System.Text;
 namespace Algorithms.Algorithms.PrincetonPartII
 {
     /// <summary>
+    /// tl;dr fastest substring search
+    /// 
     /// Simple way to check for anything that matches, then scoot over and try it out. 
     /// Kinda like testing out a stamp.
     /// </summary>

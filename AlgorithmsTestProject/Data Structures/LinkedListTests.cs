@@ -26,17 +26,17 @@ namespace AlgorithmsTestProject
             head = node;
         }
 
-        [TestMethod]
-        public void LinkedListTest()
-        {
-            LinkedList linkedList = new LinkedList(head);
-            linkedList.AddFirst(3);
+        //[TestMethod]
+        //public void LinkedListTest()
+        //{
+        //    LinkedList linkedList = new LinkedList(head);
+        //    linkedList.AddFirst(3);
 
-            var nodes = linkedList.ReturnAllNodes();
-            Assert.AreEqual(3, nodes.Count);
-            Assert.AreEqual(3, nodes[0].data);
-            Assert.AreEqual(1, nodes[1].data);
-            Assert.AreEqual(2, nodes[2].data);
-        }
+        //    var nodes = linkedList.ReturnAllNodes();
+        //    Assert.AreEqual(3, nodes.Count);
+        //    Assert.AreEqual(3, nodes[0].data);
+        //    Assert.AreEqual(1, nodes[1].data);
+        //    Assert.AreEqual(2, nodes[2].data);
+        //}
     }
 }

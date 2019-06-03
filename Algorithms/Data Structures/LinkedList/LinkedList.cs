@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Algorithms.LinkedList
 {
-    public class LinkedList
+    public class LinkedList2
     {
         private Node _head;
-        public LinkedList(Node head)
+        public LinkedList2(Node head)
         {
             _head = head;
         }

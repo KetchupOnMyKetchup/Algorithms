@@ -4,6 +4,18 @@ using System.Text;
 
 namespace Algorithms.Algorithms.PrincetonPartII.CH4
 {
+    /// <summary>
+    /// tldr: Flexible and extendable 
+    /// 
+    /// If Q > M*N^2, the probabtility of a false collision is 1/N
+    /// If you max out Q to largest long possible, then collision chance decreases. Calculated by 1/Q
+    /// 
+    /// Monte Carlo version = if hash matches, return it. Don't double check. 
+    /// Always linear time. Extremely likely to get right answer (but not always)
+    /// 
+    /// Las Vegas version = if hash matches, make sure that the actual numbers match. Always returns correct answer. 
+    /// Extrenely likely to run in linear time (but worst case is M*N)
+    /// </summary>
     public class RabinKarp
     {
         private long patHash; // pattern hash value
@@ -16,7 +28,7 @@ namespace Algorithms.Algorithms.PrincetonPartII.CH4
         {
             M = pat.Length;
             R = 256;
-            Q = 997;
+            Q = 997; // TODO: Fix to generate random prime larger than M*N^2
             RM = 1;
             for (int i = 1; i <= M - 1; i++)
                 RM = (R * RM) % Q;
