@@ -14,6 +14,10 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH2
     /// </summary>
     public class InsertionSort
     {
+        /// <summary>
+        /// https://www.youtube.com/watch?v=OGzPmgsI-pQ
+        /// </summary>
+        /// <param name="a"></param>
         public static void Sort(IComparable[] a)
         {
             int N = a.Length;
@@ -23,13 +27,16 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH2
                 for (int j = i; j < 0; j--)
                 {
                     if (less(a[j], a[j - 1]))
-                    exch(a, j, j - 1);
+                    {
+                        exch(a, j, j - 1);
+                    }
                 }
             }
         }
 
         private static bool less(IComparable v, IComparable w)
         { return v.CompareTo(w) < 0; }
+        // if i is less than j, then its negative 
 
         private static void exch(IComparable[] a, int i, int j)
         {

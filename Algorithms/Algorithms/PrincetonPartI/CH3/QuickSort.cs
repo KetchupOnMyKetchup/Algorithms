@@ -17,58 +17,64 @@ namespace Algorithms.Algorithms.PrincetonPartI
     /// </summary>
     public class QuickSort
     {
-        public static void sort(IComparable[] a)
+        private IComparable[] _array;
+
+        public void sort(IComparable[] a)
         {
-            Randomize(a);
+            this._array = a;
+
+            Randomize();
             //StdRandom.shuffle(a);
-            sort(a, 0, a.Length - 1);
+            sort(0, a.Length - 1);
         }
 
-        private static void sort(IComparable[] a, int lo, int hi)
+        private void sort(int lo, int hi)
         {
             if (hi <= lo) return;
-            int j = partition(a, lo, hi);
-            sort(a, lo, j - 1);
-            sort(a, j + 1, hi);
+
+            int j = partition(lo, hi);
+            sort(lo, j - 1); // recursive
+            sort(j + 1, hi); // recursive
         }
 
-        private static int partition(IComparable[] a, int lo, int hi)
+        private int partition(int lo, int hi)
         {
             int i = lo, j = hi + 1;
-            while (true)
+            while (true) // infinite while loop
             {
-                while (less(a[++i], a[lo]))
+                while (less(_array[++i], _array[lo]))
                     if (i == hi) break;
-                while (less(a[lo], a[--j]))
+
+                while (less(_array[lo], _array[--j]))
                     if (j == lo) break;
+
                 if (i >= j) break;
-                exch(a, i, j);
+                exch(i, j);
             }
-            exch(a, lo, j);
+            exch(lo, j);
             return j;
         }
 
-        private static bool less(IComparable v, IComparable w)
-        { return v.CompareTo(w) < 0; }
-
-        private static void exch(IComparable[] a, int i, int j)
+        private bool less(IComparable i, IComparable j)
         {
-            IComparable swap = a[i];
-            a[i] = a[j];
-            a[j] = swap;
+            // if i is less than j, then its negative 
+            return i.CompareTo(j) < 0;
         }
-        private static void Randomize<T>(T[] items)
+
+        private void exch(int i, int j)
+        {
+            IComparable swap = _array[i];
+            _array[i] = _array[j];
+            _array[j] = swap;
+        }
+        private void Randomize()
         {
             Random rand = new Random();
 
-            // For each spot in the array, pick
-            // a random item to swap into that spot.
-            for (int i = 0; i < items.Length - 1; i++)
+            for (int i = 0; i < _array.Length - 1; i++)
             {
-                int j = rand.Next(i, items.Length);
-                T temp = items[i];
-                items[i] = items[j];
-                items[j] = temp;
+                int j = rand.Next(i, _array.Length);
+                exch(i, j);
             }
         }
     }

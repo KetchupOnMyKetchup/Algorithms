@@ -10,11 +10,13 @@ namespace Algorithms.Algorithms.PrincetonPartI
         {
             double[] a = new double[5] { 1.0, 2.0, 3.0, 4.0, 5.0 };
             int N = a.Length;
+            int index = N - 1;
+
             for (int i = 0; i < N / 2; i++)
             {
                 double temp = a[i];
-                a[i] = a[N - 1 - i];
-                a[N - i - 1] = temp;
+                a[i] = a[index - i];
+                a[index - i] = temp;
             }
 
             foreach (var item in a)

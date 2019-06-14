@@ -7,6 +7,7 @@ namespace Algorithms.Algorithms
 {
     public class ReverseLinkedList
     {
+        // 1 2 3 4 5 
         private Node Reverse(Node head)
         {
             Node following = head; // following = forward

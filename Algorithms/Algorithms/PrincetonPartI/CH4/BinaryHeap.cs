@@ -5,6 +5,8 @@ using System.Text;
 namespace Algorithms.Algorithms.PrincetonPartI.CH4
 {
     /// <summary>
+    /// Heap on the other hand follows just one property, For Min-heap, all the elements in the child (both left and right) should be greater than the root value.
+    /// And for Max-heap, all the elements in the child(both left and right) should be less than the root value.
     /// Max value at top. Top = 1 in this case, no 0 index. 
     /// Add node at end of tree, swim it up (1 + lg N compares)
     /// Delete max: exchange top with bottom, remove max from bottom. Swim top back down. 
