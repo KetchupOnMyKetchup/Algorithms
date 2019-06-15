@@ -10,9 +10,11 @@ namespace Algorithms.Algorithms.PrincetonPartII.CH4
     /// If 0 is connected to 5, then there will be a 0--5 and 5--0 connection (2 representations of same edge)
     /// See page 23 of 41 PDF on Graphs (Algortihms 2 course)
     /// </summary>
-    class Graph_Adjacency_List
+    public class Graph_Adjacency_List
     {
         ConcurrentBag<int>[] graph;
+
+        public int numberVertices;
 
         /// <summary>
         /// Create an array of concurrent bags
@@ -20,6 +22,8 @@ namespace Algorithms.Algorithms.PrincetonPartII.CH4
         /// <param name="V">Number of Vertices</param>
         public Graph_Adjacency_List(int V)
         {
+            numberVertices = V;
+
             graph = new ConcurrentBag<int>[V];
 
             for (int v = 0; v < V; v++)
@@ -27,12 +31,12 @@ namespace Algorithms.Algorithms.PrincetonPartII.CH4
                 graph[v] = new ConcurrentBag<int>();
             }
         }
-        public void addEdge(int v, int w)
+        public void AddEdge(int v, int w)
         {
             graph[v].Add(w);
             graph[w].Add(v);
         }
-        public IEnumerable<int> adj(int v)
+        public IEnumerable<int> FindAdjacentVertices(int v)
         {
             return graph[v];
         }
