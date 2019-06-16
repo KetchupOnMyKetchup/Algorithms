@@ -10,7 +10,7 @@ namespace Algorithms.Algorithms.Cram.CTCI
     /// Hint: Let diff be the difference between a and b. Can you use diff in some way? Then can you get rid of this temporary variable?
     /// Hint: You could also try using XOR.
     /// </summary>
-    public class _16_1NumberSwap
+    class _16_1NumberSwap
     {
         public static void SwapNumbers(int a, int b) // 10 and 2
         {
@@ -29,9 +29,9 @@ namespace Algorithms.Algorithms.Cram.CTCI
             Console.Read();
         }
 
-        static void Main(string[] args)
-        {
-            _16_1NumberSwap.SwapNumbers(10, 2);
-        }
+        //static void Main(string[] args)
+        //{
+        //    _16_1NumberSwap.SwapNumbers(10, 2);
+        //}
     }
 }
