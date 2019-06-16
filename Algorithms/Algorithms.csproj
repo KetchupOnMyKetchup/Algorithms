@@ -6,12 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Algorithms\AVL Tree\" />
-    <Folder Include="Algorithms\Collection Concurrency\" />
     <Folder Include="Algorithms\PrincetonPartII\CH2\" />
-    <Folder Include="Algorithms\String Search\" />
-    <Folder Include="Algorithms\Set Collection\" />
-    <Folder Include="Algorithms\Sorting\" />
   </ItemGroup>
 
 </Project>
