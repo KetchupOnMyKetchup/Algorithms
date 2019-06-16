@@ -13,7 +13,18 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH6
     /// 
 
     /// </summary>
-    class HashTables
+    class HashTableNotes
     {
+        //public int hashCode()
+        //{
+        //    int hash = 17;
+        //    hash = 31 * hash + who.hashCode();
+        //    hash = 31 * hash + when.hashCode();
+        //    hash = 31 * hash + ((Double)amount).hashCode();
+        //    return hash;
+        //}
+
+        //private int hash(Key key)
+        //{ return (key.hashCode() & 0x7fffffff) % M; }
     }
 }
