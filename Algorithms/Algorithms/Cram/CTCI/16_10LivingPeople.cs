@@ -48,23 +48,23 @@ namespace Algorithms.Algorithms.Cram.CTCI
             return _year;
         }
 
-        static void Main(string[] arg)
-        {
-            List<Person> people = new List<Person>()
-            {
-                new Person(){ Id = 1, BirthYear = 1900, DeathYear = 1999}, 
-                new Person(){ Id = 2, BirthYear = 1991, DeathYear = 2050}, 
-                new Person(){ Id = 3, BirthYear = 1950, DeathYear = 2000}, 
-                new Person(){ Id = 4, BirthYear = 1900, DeathYear = 2000}, 
-                new Person(){ Id = 5, BirthYear = 1904, DeathYear = 1987}, 
-                new Person(){ Id = 6, BirthYear = 1967, DeathYear = 2090}, 
-                new Person(){ Id = 7, BirthYear = 1952, DeathYear = 1980}, 
-                new Person(){ Id = 8, BirthYear = 1920, DeathYear = 1963}, 
-                new Person(){ Id = 9, BirthYear = 1910, DeathYear = 1960}
-            };
+        //static void Main(string[] arg)
+        //{
+        //    List<Person> people = new List<Person>()
+        //    {
+        //        new Person(){ Id = 1, BirthYear = 1900, DeathYear = 1999}, 
+        //        new Person(){ Id = 2, BirthYear = 1991, DeathYear = 2050}, 
+        //        new Person(){ Id = 3, BirthYear = 1950, DeathYear = 2000}, 
+        //        new Person(){ Id = 4, BirthYear = 1900, DeathYear = 2000}, 
+        //        new Person(){ Id = 5, BirthYear = 1904, DeathYear = 1987}, 
+        //        new Person(){ Id = 6, BirthYear = 1967, DeathYear = 2090}, 
+        //        new Person(){ Id = 7, BirthYear = 1952, DeathYear = 1980}, 
+        //        new Person(){ Id = 8, BirthYear = 1920, DeathYear = 1963}, 
+        //        new Person(){ Id = 9, BirthYear = 1910, DeathYear = 1960}
+        //    };
 
-            FindMostAlivePeople(people);
-        }
+        //    FindMostAlivePeople(people);
+        //}
     }
 
     public class Person
