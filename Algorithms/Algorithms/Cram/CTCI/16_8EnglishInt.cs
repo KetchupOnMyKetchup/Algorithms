@@ -73,16 +73,16 @@ namespace Algorithms.Algorithms.Cram.CTCI
             return result;
         }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(0));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(1));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(12));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(44));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(101));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(2500));
-            Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(123456789));
-            Console.ReadLine();
-        }
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(0));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(1));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(12));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(44));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(101));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(2500));
+        //    Console.WriteLine(_16_8EnglishInt.TranslateIntToEnglish(123456789));
+        //    Console.ReadLine();
+        //}
     }
 }
