@@ -28,9 +28,9 @@ namespace Algorithms.Algorithms.Cram.CTCI
             }
         }
 
-        static void Main(string[] arg)
-        {
-            DivingBoardSize(10, 4, 6);
-        }
+        //static void Main(string[] arg)
+        //{
+        //    DivingBoardSize(10, 4, 6);
+        //}
     }
 }
