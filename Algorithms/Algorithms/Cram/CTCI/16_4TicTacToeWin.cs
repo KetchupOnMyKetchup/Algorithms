@@ -48,31 +48,31 @@ namespace Algorithms.Algorithms.Cram.CTCI
             else return false;
         }
 
-        static void Main(string[] args)
-        {
-            // 2D Array
-            string[,] array = new string[3, 3];
-            array[0, 0] = "X";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 0));
+        //static void Main(string[] args)
+        //{
+        //    // 2D Array
+        //    string[,] array = new string[3, 3];
+        //    array[0, 0] = "X";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 0));
 
-            array[0, 2] = "X";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 2));
+        //    array[0, 2] = "X";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 2));
 
-            array[1, 2] = "O";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 1, 2));
+        //    array[1, 2] = "O";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 1, 2));
 
-            array[0, 1] = "O";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 1));
+        //    array[0, 1] = "O";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 0, 1));
 
-            array[2, 1] = "O";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 2, 1));
+        //    array[2, 1] = "O";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 2, 1));
 
-            array[1, 1] = "X";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 1, 1));
+        //    array[1, 1] = "X";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 1, 1));
 
-            array[2, 2] = "X";
-            Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 2, 2));
-            Console.ReadLine();
-        }
+        //    array[2, 2] = "X";
+        //    Console.WriteLine(_16_4TicTacToeWin.CheckForWin(array, 2, 2));
+        //    Console.ReadLine();
+        //}
     }
 }
