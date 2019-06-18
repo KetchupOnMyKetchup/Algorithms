@@ -21,7 +21,8 @@ namespace Algorithms.Algorithms.PrincetonPartII.CH4
             _hasBeenVisited = new bool[length];
             edgeTo = new int[length];
 
-            DepthFirstSearch(G, s);        }
+            DepthFirstSearch(G, s);
+        }
 
         private void DepthFirstSearch(Graph_Adjacency_List G, int vertex)
         {

@@ -12,5 +12,15 @@ namespace Algorithms.Algorithms.Cram.CTCI
     /// </summary>
     class _16_20T9
     {
+        //static void Solve()
+        //{
+
+        //}
+
+
+        //static void Main()
+        //{
+        //    Solve();
+        //}
     }
 }

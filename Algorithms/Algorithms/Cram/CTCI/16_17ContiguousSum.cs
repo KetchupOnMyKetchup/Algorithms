@@ -27,7 +27,7 @@ namespace Algorithms.Algorithms.Cram.CTCI
 
                 while (j < array.Length)
                 {
-                    sum = sum + array[j++];
+                    sum += array[j++];
                     if (sum > max) max = sum;
                 }
             }
@@ -36,13 +36,13 @@ namespace Algorithms.Algorithms.Cram.CTCI
         }
 
 
-        static void Main()
-        {
-            int[] array = new int[] { 5, -3, 17, -20, -1, 4, 18  };
+        //static void Main()
+        //{
+        //    int[] array = new int[] { 5, -3, 17, -20, -1, 4, 18  };
 
-            FindSum(array);
+        //    FindSum(array);
 
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
     }
 }
