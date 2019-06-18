@@ -72,27 +72,27 @@ namespace Algorithms.Algorithms.Cram.CTCI
             return count;
         }
 
-        static void Main()
-        {
-            // 3 ponds sized 2, 4, and 1.
-            int[,] pondMatrix = new int[4, 4]
-                { 
-                    { 0, 2, 1, 0 },
-                    { 0, 1, 0, 1 },
-                    { 1, 1, 0, 1 },
-                    { 0, 1, 0, 1 },
-                };
+        //static void Main()
+        //{
+        //    // 3 ponds sized 2, 4, and 1.
+        //    int[,] pondMatrix = new int[4, 4]
+        //        { 
+        //            { 0, 2, 1, 0 },
+        //            { 0, 1, 0, 1 },
+        //            { 1, 1, 0, 1 },
+        //            { 0, 1, 0, 1 },
+        //        };
 
-            _16_19PondSizes pond = new _16_19PondSizes();
-            var results = pond.Solve(pondMatrix);
+        //    _16_19PondSizes pond = new _16_19PondSizes();
+        //    var results = pond.Solve(pondMatrix);
 
-            foreach (var result in results)
-            {
-                Console.WriteLine($"There is a pond of length {result}.");
-            }
+        //    foreach (var result in results)
+        //    {
+        //        Console.WriteLine($"There is a pond of length {result}.");
+        //    }
 
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
 
     }
 }
