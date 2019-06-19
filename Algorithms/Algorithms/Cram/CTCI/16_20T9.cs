@@ -14,10 +14,23 @@ namespace Algorithms.Algorithms.Cram.CTCI
     /// </summary>
     class _16_20T9
     {
+        private char[][] charMap = new char[][] 
+        {
+            new char[]{ 'a', 'b', 'c' },//2
+            new char[]{ 'd', 'e', 'f' }, 
+            new char[]{ 'g', 'h', 'i' }, 
+            new char[]{ 'j', 'k', 'l' }, 
+            new char[]{ 'm', 'n', 'o' }, 
+            new char[]{ 'p', 'q', 'r', 's' },
+            new char[]{ 't', 'u', 'v' },
+            new char[]{ 'w', 'x', 'y', 'z' },
+        };
+
         static List<string> Solve(int input, Trie trie)
         {
             // R- way trie should be used for T9
-            var startingNumber = input % 1000;
+
+
 
             char[] charArray = input.ToString().ToCharArray();
 
