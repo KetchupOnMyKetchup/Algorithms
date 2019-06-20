@@ -9,4 +9,8 @@
     <Folder Include="Algorithms\PrincetonPartII\CH2\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+  </ItemGroup>
+
 </Project>

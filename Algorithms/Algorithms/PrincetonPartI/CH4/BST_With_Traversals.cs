@@ -67,11 +67,16 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH4
                     }
                 }
             }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="Root"></param>
             public void Preorder(Node Root)
             {
                 if (Root != null)
                 {
-                    Console.Write(Root.item + " ");
+                    Console.Write(Root.item + " "); // Pre is print first
                     Preorder(Root.leftc);
                     Preorder(Root.rightc);
                 }
@@ -81,7 +86,7 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH4
                 if (Root != null)
                 {
                     Inorder(Root.leftc);
-                    Console.Write(Root.item + " ");
+                    Console.Write(Root.item + " "); // Print is IN the middle
                     Inorder(Root.rightc);
                 }
             }
@@ -91,7 +96,7 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH4
                 {
                     Postorder(Root.leftc);
                     Postorder(Root.rightc);
-                    Console.Write(Root.item + " ");
+                    Console.Write(Root.item + " "); // Post, Print at the end
                 }
             }
         }
