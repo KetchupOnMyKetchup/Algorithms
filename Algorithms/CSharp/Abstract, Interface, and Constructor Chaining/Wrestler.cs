@@ -26,6 +26,12 @@ namespace Algorithms.CSharp.Abstract__Interface__and_Constructor_Chaining
             return CalculateTotalPay(hours);
         }
 
+        // Can override with new keyword in inherited class, doesn't need to be virtual
+        public int GetTotalPay2(int hours)
+        {
+            return CalculateTotalPay(hours);
+        }
+
         // Abstract methods do not provide an implementation and force the derived classes to override the method. 
         // So, abstract methods have no actual code in them, and subclasses HAVE TO override the method.
         public abstract void ThemeMusic();

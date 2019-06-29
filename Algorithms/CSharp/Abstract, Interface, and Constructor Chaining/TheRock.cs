@@ -31,7 +31,21 @@ namespace Algorithms.CSharp.Abstract__Interface__and_Constructor_Chaining
         {
             return CalculateTotalPay(hours);
         }
+
+        // Can override with new keyword even though base class version is not virtual
+        public new int GetTotalPay2(int hours)
+        {
+            return CalculateTotalPay(hours);
+        }
+
         private int CalculateTotalPay(int hours)
+        {
+            int total = Bonus + PaymentPerHour(hours);
+            Console.WriteLine(total);
+            return total;
+        }
+
+        private int CalculateTotalPay2(int hours)
         {
             int total = Bonus + PaymentPerHour(hours);
             Console.WriteLine(total);
