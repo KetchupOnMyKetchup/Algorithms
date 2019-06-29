@@ -801,8 +801,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Crystal\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\caten\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -811,17 +810,15 @@
       "projectUniqueName": "C:\\Algorithms\\Algorithms\\Algorithms.csproj",
       "projectName": "Algorithms",
       "projectPath": "C:\\Algorithms\\Algorithms\\Algorithms.csproj",
-      "packagesPath": "C:\\Users\\Crystal\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\caten\\.nuget\\packages\\",
       "outputPath": "C:\\Algorithms\\Algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Crystal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\caten\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
