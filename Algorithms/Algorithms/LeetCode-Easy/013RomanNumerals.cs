@@ -54,14 +54,14 @@ namespace Algorithms.Algorithms.Cram.Ad_hoc
             dict.Add('M', 1000);
         }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(RomanToInt("IV"));
-            Console.WriteLine(RomanToInt("VII"));
-            Console.WriteLine(RomanToInt("IV"));
-            Console.WriteLine(RomanToInt("LVIII"));
-            Console.WriteLine(RomanToInt("MCMXCIV"));
-            Console.ReadLine();
-        }
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(RomanToInt("IV"));
+        //    Console.WriteLine(RomanToInt("VII"));
+        //    Console.WriteLine(RomanToInt("IV"));
+        //    Console.WriteLine(RomanToInt("LVIII"));
+        //    Console.WriteLine(RomanToInt("MCMXCIV"));
+        //    Console.ReadLine();
+        //}
     }
 }
