@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Algorithms\LeetCode-Medium\" />
     <Folder Include="Algorithms\PrincetonPartII\CH2\" />
   </ItemGroup>
 
