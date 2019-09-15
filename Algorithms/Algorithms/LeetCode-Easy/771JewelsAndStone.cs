@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Algorithms.Algorithms.LeetCode_Easy
@@ -8,17 +9,25 @@ namespace Algorithms.Algorithms.LeetCode_Easy
     {
         public static int NumJewelsInStones(string J, string S)
         {
-            int count = 0;
+            var dict = new Dictionary<char, int>();
+
+            for (int i = 0; i < J.Length; i++) dict.Add(J[i], 0);
 
             for (int i = 0; i < S.Length; i++)
             {
-                if (J.Contains(S[i]))
-                {
-                    count++;
-                }
+                if (dict.ContainsKey(S[i])) dict[S[i]]++;
             }
 
-            return count;
+            return dict.Sum(x => x.Value);
+
+            // BAD, double for loop
+            //for (int i = 0; i < S.Length; i++)
+            //{
+            //    if (J.Contains(S[i]))
+            //    {
+            //        count++;
+            //    }
+            //}
         }
 
         //static void Main(string[] args)

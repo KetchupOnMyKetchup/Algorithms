@@ -27,28 +27,28 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             return ans;
         }
 
-        static void Main(string[] args)
-        {
-            // Multidimensional array initialization
-            //int[,] grid = new int[,] 
-            //{ 
-            //    { 3, 0, 8, 4 }, 
-            //    { 2, 4, 5, 7 }, 
-            //    { 9, 2, 6, 3 }, 
-            //    { 0, 3, 1, 0 }
-            //};
+        //static void Main(string[] args)
+        //{
+        //    // Multidimensional array initialization
+        //    //int[,] grid = new int[,] 
+        //    //{ 
+        //    //    { 3, 0, 8, 4 }, 
+        //    //    { 2, 4, 5, 7 }, 
+        //    //    { 9, 2, 6, 3 }, 
+        //    //    { 0, 3, 1, 0 }
+        //    //};
 
-            // Jagged array initialization
-            int[][] grid = new int[][]
-            {
-                new int[] { 3, 0, 8, 4 },
-                new int[] { 2, 4, 5, 7 },
-                new int[] { 9, 2, 6, 3 },
-                new int[] { 0, 3, 1, 0 }
-            };
+        //    // Jagged array initialization
+        //    int[][] grid = new int[][]
+        //    {
+        //        new int[] { 3, 0, 8, 4 },
+        //        new int[] { 2, 4, 5, 7 },
+        //        new int[] { 9, 2, 6, 3 },
+        //        new int[] { 0, 3, 1, 0 }
+        //    };
 
-            Console.WriteLine(MaxIncreaseKeepingSkyline(grid).ToString());
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(MaxIncreaseKeepingSkyline(grid).ToString());
+        //    Console.ReadLine();
+        //}
     }
 }
