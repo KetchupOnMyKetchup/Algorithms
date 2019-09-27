@@ -24,7 +24,7 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH2
 
             for (int i = 0; i < N; i++)
             {
-                for (int j = i; j < 0; j--)
+                for (int j = i; j > 0; j--)
                 {
                     if (less(a[j], a[j - 1]))
                     {

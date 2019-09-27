@@ -43,10 +43,10 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             return result;
         }
 
-        public static void Main()
-        {
-            Console.WriteLine(MyAtoi("   "));
-            Console.ReadLine();
-        }
+        //public static void Main()
+        //{
+        //    Console.WriteLine(MyAtoi("   "));
+        //    Console.ReadLine();
+        //}
     }
 }
