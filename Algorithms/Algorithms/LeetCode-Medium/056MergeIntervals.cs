@@ -4,7 +4,6 @@ using System.Text;
 
 namespace Algorithms.Algorithms.LeetCode_Medium
 {
-    // TEST
     class _056MergeIntervals
     {
         public static int[][] Merge(int[][] intervals)
