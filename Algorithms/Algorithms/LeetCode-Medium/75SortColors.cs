@@ -8,18 +8,12 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     {
         public static void SortColors(int[] nums)
         {
-            for (int i = 0; i < nums.Length; i++)
+            for (int i = 1; i < nums.Length; i++)
             {
                 for (int j = i; j > 0; j--)
                 {
-                    if (nums[j] < nums[j - 1])
-                    {
-                        Exch(nums, j - 1, j);
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    if (nums[j] < nums[j - 1]) Exch(nums, j - 1, j);
+                    else break;
                 }
             }
         }
@@ -31,12 +25,12 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             nums[j] = temp;
         }
 
-        public static void Main()
-        {
-            int[] myArr = new int[] { 2, 0, 2, 1, 1, 0 };
+        //public static void Main()
+        //{
+        //    int[] myArr = new int[] { 2, 0, 2, 1, 1, 0 };
 
-            SortColors(myArr);
-            Console.ReadLine();
-        }
+        //    SortColors(myArr);
+        //    Console.ReadLine();
+        //}
     }
 }
