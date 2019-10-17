@@ -15,12 +15,6 @@ namespace Algorithms.Algorithms.PrincetonPartI.CH4
             public int item;
             public Node leftc;
             public Node rightc;
-            public void display()
-            {
-                Console.Write("[");
-                Console.Write(item);
-                Console.Write("]");
-            }
         }
         class Tree
         {

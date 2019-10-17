@@ -45,6 +45,13 @@ namespace Algorithms.Algorithms.CTCI.Ch1
 
         static int Partition<T>(T[] arr, int low, int high) where T : IComparable<T>
         {
+            //Console.WriteLine("Array is:");
+
+            //foreach (var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             T pivot = arr[high];
 
             // index of smaller element 
@@ -57,14 +64,18 @@ namespace Algorithms.Algorithms.CTCI.Ch1
                 {
                     i++;
 
+                    //Console.WriteLine($"i = {i} and arr[i] = {arr[i]}");
+                    //Console.WriteLine($"j = {j} and arr[j] = {arr[j]}");
+
                     // swap arr[i] and arr[j] 
-                    //Exch(arr, i, j);
                     Exch(ref arr[i], ref arr[j]);
+                    //Exch(arr, i, j);
                 }
             }
 
             // swap arr[i+1] and arr[high] (or pivot) 
             Exch(ref arr[i + 1], ref arr[high]);
+            //Exch(arr, i + 1, high);
 
             return i + 1;
         }
@@ -76,12 +87,12 @@ namespace Algorithms.Algorithms.CTCI.Ch1
             j = temp;
         }
 
-        //private static void Exch<T>(T[] arr, int i, int j) where T : IComparable<T>
-        //{
-        //    T temp = arr[i];
-        //    arr[i] = arr[j];
-        //    arr[j] = temp;
-        //}
+        private static void Exch<T>(T[] arr, int i, int j) where T : IComparable<T>
+        {
+            T temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
 
         //private static void Quick_Sort <T>(T[] arr, int left, int right) where T : IComparable<T>
         //{
@@ -112,11 +123,14 @@ namespace Algorithms.Algorithms.CTCI.Ch1
         //    }
         //}
 
-        public static void Main()
-        {
-            string input = "ahkjidhikjas";
-            Console.WriteLine(UniqueChar(input));
-            Console.ReadLine();
-        }
+        //public static void Main()
+        //{
+        //    //string input = "ahkjidhikjas";
+        //    //int[] input = new int[] { 5, 4, 3, 2, 1 };
+        //    int[] input = new int[] { 1, 5, 8, 3, 2, 4 };
+        //    //Console.WriteLine(UniqueChar(input));
+        //    QuickSort(input, 0, input.Length - 1);
+        //    Console.ReadLine();
+        //}
     }
 }
