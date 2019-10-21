@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Algorithms\CTCI\Ch2\" />
     <Folder Include="Algorithms\PrincetonPartII\CH2\" />
   </ItemGroup>
 
