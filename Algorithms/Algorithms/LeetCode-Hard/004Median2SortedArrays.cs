@@ -43,13 +43,13 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             return isFirstArray;
         }
 
-        public static void Main()
-        {
-            int[] nums1 = new int[] { };
-            int[] nums2 = new int[] { 3, 5 };
+        //public static void Main()
+        //{
+        //    int[] nums1 = new int[] { };
+        //    int[] nums2 = new int[] { 3, 5 };
 
-            Console.WriteLine(FindMedianSortedArrays(nums1, nums2));
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(FindMedianSortedArrays(nums1, nums2));
+        //    Console.ReadLine();
+        //}
     }
 }
