@@ -18,49 +18,57 @@ namespace Algorithms.Algorithms.LeetCode_Hard
         
         private static bool RegexMatching(string s, string p)
         {
-            if (p.Length == 0 && s.Length != 0) return false;
             if (p.Length == 0 && s.Length == 0) return true;
 
             List<Node> array = new List<Node>();
-            int count = 0;
-
-            //if its a *, then set previous node to true
 
             for (int i = 0; i < p.Length; i++)
             {
-                var tempNode = new Node(p[i]);
-
-                if (p[i] == '*')
-                {
-                    array
-                    i++;
-                }
-
-                array[count] = tempNode;
-                count++;
+                if (p[i] == '*') array[array.Count - 1].IsAsterik = true;
+                else array.Add(new Node(p[i]));
             }
 
-            count = 0;
+            int count = 0;
 
             for (int i = 0; i < s.Length;)
             {
-                if (array[count] == null) return false; // remove
+                if (count > array.Count - 1) return false;
 
                 if (array[count].Value == '.')
                 {
-                    count++;
-                    i++;
+                    if (array[count].IsAsterik)
+                    {
+                        if (count == array.Count - 1) return true;
+                        else
+                        {
+                            while (s[i] != array[count].Value)
+                            {
+                                i++;
+
+                                if (i >= s.Length - 1)
+                                {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        count++;
+                        i++;
+                    }
                 }
                 else if (s[i] != array[count].Value)
                 {
-                    if (array[count].IsAsterik) // i > 0 && array[count].IsAsterik && s[i - 1] == array[count].Value) || 
-                    {
-                        count++;
-                        continue;
-                    }
+                    if (array[count].IsAsterik) count++;
                     else return false;
                 }
-                else i++;
+                else if (array[count].IsAsterik) i++;
+                else
+                {
+                    i++;
+                    count++;
+                }
             }
 
             return true;
@@ -68,14 +76,20 @@ namespace Algorithms.Algorithms.LeetCode_Hard
 
         public static void Main()
         {
-            //string s = "aaab";
-            //string p = "a*b";
+            //    string s = "ab";
+            //    string p = ".*c";
+
+            string s = "mississippi";
+            string p = "mis*is*p*.";
+
+            //string s = "aa";
+            //string p = "a";
 
             //string s = "b";
             //string p = "a*b";
 
-            string s = "ab";
-            string p = ".*";
+            //string s = "ab";
+            //string p = ".*";
 
             Console.WriteLine(RegexMatching(s, p));
             Console.ReadLine();
