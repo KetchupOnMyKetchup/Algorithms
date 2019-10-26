@@ -10,14 +10,15 @@ namespace Algorithms.Algorithms.Cram.Ad_hoc
 
         public static int RomanToInt(string s) // IV = 4, VII = 7
         {
-            SeedDictionary();
+            if (dict.Count == 0) SeedDictionary();
+            
             int result = 0;
 
             Stack<int> stack = new Stack<int>();
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (CheckSpecialCase(s[i], s[i + 1]))
+                if (i < s.Length - 1 && CheckSpecialCase(s[i], s[i + 1]))
                 {
                     stack.Push(dict.GetValueOrDefault(s[i + 1]) - dict.GetValueOrDefault(s[i]));
                     i++;
@@ -53,10 +54,14 @@ namespace Algorithms.Algorithms.Cram.Ad_hoc
             dict.Add('M', 1000);
         }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(RomanToInt("IV"));
-            Console.ReadLine();
-        }
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(RomanToInt("IV"));
+        //    Console.WriteLine(RomanToInt("VII"));
+        //    Console.WriteLine(RomanToInt("IV"));
+        //    Console.WriteLine(RomanToInt("LVIII"));
+        //    Console.WriteLine(RomanToInt("MCMXCIV"));
+        //    Console.ReadLine();
+        //}
     }
 }

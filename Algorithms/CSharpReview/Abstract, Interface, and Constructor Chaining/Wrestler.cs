@@ -20,8 +20,14 @@ namespace Algorithms.CSharp.Abstract__Interface__and_Constructor_Chaining
             return hours * 250;
         }
 
-        //•	Virtual methods have an implementation and provide the derived classes with the option of overriding it. 
+        //	Virtual methods have an implementation and provide the derived classes with the option of overriding it. 
         public virtual int GetTotalPay(int hours)
+        {
+            return CalculateTotalPay(hours);
+        }
+
+        // Can override with new keyword in inherited class, doesn't need to be virtual
+        public int GetTotalPay2(int hours)
         {
             return CalculateTotalPay(hours);
         }

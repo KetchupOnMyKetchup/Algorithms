@@ -41,7 +41,6 @@ namespace Algorithms.Algorithms.Cram.Ad_hoc
                 start++;
                 end--;
             }
-
         }
     }
 }
