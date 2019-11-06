@@ -28,22 +28,22 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             return (isValidBST(root.left, minVal, root.val) && isValidBST(root.right, root.val, maxVal));
         }
 
-        public static void Main()
-        {
-            var right = new TreeNode(15)
-            {
-                left = new TreeNode(6),
-                right = new TreeNode(20)
-            };
+        //public static void Main()
+        //{
+        //    var right = new TreeNode(15)
+        //    {
+        //        left = new TreeNode(6),
+        //        right = new TreeNode(20)
+        //    };
 
-            var root = new TreeNode(10)
-            {
-                left = new TreeNode(5),
-                right = right
-            };
+        //    var root = new TreeNode(10)
+        //    {
+        //        left = new TreeNode(5),
+        //        right = right
+        //    };
 
-            Console.WriteLine(IsValidBST(root));
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(IsValidBST(root));
+        //    Console.ReadLine();
+        //}
     }
 }

@@ -74,25 +74,25 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             return true;
         }
 
-        public static void Main()
-        {
-            //    string s = "ab";
-            //    string p = ".*c";
+        //public static void Main()
+        //{
+        //    //    string s = "ab";
+        //    //    string p = ".*c";
 
-            string s = "mississippi";
-            string p = "mis*is*p*.";
+        //    string s = "mississippi";
+        //    string p = "mis*is*p*.";
 
-            //string s = "aa";
-            //string p = "a";
+        //    //string s = "aa";
+        //    //string p = "a";
 
-            //string s = "b";
-            //string p = "a*b";
+        //    //string s = "b";
+        //    //string p = "a*b";
 
-            //string s = "ab";
-            //string p = ".*";
+        //    //string s = "ab";
+        //    //string p = ".*";
 
-            Console.WriteLine(RegexMatching(s, p));
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(RegexMatching(s, p));
+        //    Console.ReadLine();
+        //}
     }
 }
