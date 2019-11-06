@@ -15,7 +15,25 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             public char Value { get; set; }
             public bool IsAsterik { get; set; }
         }
-        
+
+        public static bool isMatch(String s, String p)
+        {
+            if (string.IsNullOrEmpty(p)) return string.IsNullOrEmpty(s);
+
+            bool first_match = (!string.IsNullOrEmpty(s) &&
+                                   (p[0] == s[0] || p[0] == '.'));
+
+            if (p.Length >= 2 && p[1] == '*')
+            {
+                return (isMatch(s, p.Substring(2)) ||
+                        (first_match && isMatch(s.Substring(1), p)));
+            }
+            else
+            {
+                return first_match && isMatch(s.Substring(1), p.Substring(1));
+            }
+        }
+
         private static bool RegexMatching(string s, string p)
         {
             if (p.Length == 0 && s.Length != 0) return false;
@@ -30,11 +48,11 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             {
                 var tempNode = new Node(p[i]);
 
-                if (p[i] == '*')
-                {
-                    array
-                    i++;
-                }
+                //if (p[i] == '*')
+                //{
+                //    array
+                //    i++;
+                //}
 
                 array[count] = tempNode;
                 count++;
@@ -66,19 +84,19 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             return true;
         }
 
-        public static void Main()
-        {
-            //string s = "aaab";
-            //string p = "a*b";
+        //public static void Main()
+        //{
+        //    string s = "aaab";
+        //    string p = "a*b";
 
-            //string s = "b";
-            //string p = "a*b";
+        //    //string s = "b";
+        //    //string p = "a*b";
 
-            string s = "ab";
-            string p = ".*";
+        //    //string s = "ab";
+        //    //string p = ".*";
 
-            Console.WriteLine(RegexMatching(s, p));
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(isMatch(s, p));
+        //    Console.ReadLine();
+        //}
     }
 }
