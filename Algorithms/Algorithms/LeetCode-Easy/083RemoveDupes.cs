@@ -13,18 +13,18 @@ namespace Algorithms.Algorithms.LeetCode_Easy
             public ListNode(int x) { val = x; }
         }
 
-        public static void Main()
-        {
-            var head = new ListNode(1);
-            head.next = new ListNode(1);
-            head.next.next = new ListNode(2);
-            head.next.next.next = new ListNode(2);
+        //public static void Main()
+        //{
+        //    var head = new ListNode(1);
+        //    head.next = new ListNode(1);
+        //    head.next.next = new ListNode(2);
+        //    head.next.next.next = new ListNode(2);
 
-            ListNode result = DeleteDuplicates(head);
+        //    ListNode result = DeleteDuplicates(head);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         private static ListNode DeleteDuplicates(ListNode head)
         {
