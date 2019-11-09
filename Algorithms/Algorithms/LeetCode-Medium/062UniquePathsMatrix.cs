@@ -16,10 +16,14 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 
         private static int UniquePaths(int m, int n)
         {
-            int[][] jaggedArray = new int[3][];
-            jaggedArray[0] = new int[7];
-            jaggedArray[1] = new int[7];
-            jaggedArray[2] = new int[7];
+            int[][] jaggedArray = new int[m][];
+
+            for (int i = 0; i < m; i++)
+            {
+                jaggedArray[i] = new int[n];
+            }
+
+            return 0;
         }
     }
 }
