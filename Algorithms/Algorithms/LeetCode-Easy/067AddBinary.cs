@@ -6,16 +6,16 @@ namespace Algorithms.Algorithms.LeetCode_Easy
 {
     class _067AddBinary
     {
-        public static void Main()
-        {
-            string a = "1111";
-            string b = "1111";
+        //public static void Main()
+        //{
+        //    string a = "1010";
+        //    string b = "1011";
 
-            string result = AddBinary(a, b);
+        //    string result = AddBinary(a, b);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         private static string AddBinary(string a, string b)
         {
@@ -32,6 +32,8 @@ namespace Algorithms.Algorithms.LeetCode_Easy
                 int bValue = bi >= 0 ? b[bi--] - '0' : 0;
 
                 int curr = (aValue) + (bValue) + carryOver;
+
+                carryOver = 0;
 
                 if (curr == 3)
                 {
