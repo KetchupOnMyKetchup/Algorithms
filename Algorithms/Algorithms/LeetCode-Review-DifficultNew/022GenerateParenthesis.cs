@@ -8,7 +8,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     {
         //static void Main()
         //{
-        //    int num = 2;
+        //    int num = 3;
 
         //    List<string> result = GenerateParenthesis(num);
 

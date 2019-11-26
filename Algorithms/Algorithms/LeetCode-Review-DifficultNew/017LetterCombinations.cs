@@ -20,6 +20,13 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 
         static List<string> output = new List<string>();
 
+        public static List<string> LetterCombinations(string digits)
+        {
+            if (digits.Length != 0)
+                BackTrack("", digits);
+            return output;
+        }
+
         public static void BackTrack(string combination, string next_digits)
         {
             if (next_digits.Length == 0)
@@ -38,24 +45,17 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             }
         }
 
-        public static List<string> LetterCombinations(string digits)
-        {
-            if (digits.Length != 0)
-                BackTrack("", digits);
-            return output;
-        }
+        //public static void Main()
+        //{
+        //    string digits = "234";
+        //    var list = LetterCombinations(digits);
 
-        public static void Main()
-        {
-            string digits = "234";
-            var list = LetterCombinations(digits);
+        //    foreach (var item in list)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
 
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
     }
 }
