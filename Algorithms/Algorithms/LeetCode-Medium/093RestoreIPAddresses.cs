@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _093RestoreIPAddresses
     {
-        public static void Main()
-        {
-            //string s = "0000";
-            string s = "010010";
-            // 0.0.0.0 is valid
-            // 255.255.255.255 is valid
+        //public static void Main()
+        //{
+        //    //string s = "0000";
+        //    string s = "010010";
+        //    // 0.0.0.0 is valid
+        //    // 255.255.255.255 is valid
 
-            // 255.023.255.255 is NOT valid
-            // 255.23.255.255 is valid
+        //    // 255.023.255.255 is NOT valid
+        //    // 255.23.255.255 is valid
 
-            var result = RestoreIpAddresses(s);
+        //    var result = RestoreIpAddresses(s);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+        //    foreach (var item in result)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
 
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
 
         public static IList<string> RestoreIpAddresses(string s)
         {
@@ -40,7 +39,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
         {
             if (segmentNum == 4)
             {
-                if (pointer == s.Length) finalResult.Add(segments[0] + "." + segments[1] + "." + segments[2] + "." + segments[3]);
+                if (pointer == s.Length) finalResult.Add(string.Join('.', segments));
                 return;
             }
 
@@ -51,9 +50,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
                 string temp = s.Substring(pointer, i);
                 if (temp[0] == '0' && temp.Length > 1) continue;
 
-                int.TryParse(temp.ToString(), out int res);
-
-                if (res <= 255)
+                if (int.TryParse(temp, out int res) && res <= 255)
                 {
                     segments[segmentNum] = temp;
                     SplitIp(finalResult, segments, s, pointer + temp.Length, segmentNum + 1);
