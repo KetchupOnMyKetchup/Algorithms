@@ -27,39 +27,35 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             int[] prevQueens = new int[n];
             for (int i = 0; i < n; i++) prevQueens[i] = -1;
 
-            AddQueens(n, chessBoard, new List<string>(), prevQueens, 0);
+            AddQueens(n, chessBoard, prevQueens, 0);
 
             return chessBoard;
         }
 
-        private static void AddQueens(int n, List<IList<string>> chessBoard, List<string> partialSolution, int[] prevQueens, int y)
+        private static void AddQueens(int n, List<IList<string>> chessBoard, int[] prevQueens, int y)
         {
             if (y == n)
             {
-                chessBoard.Add(new List<string>(partialSolution));
-                // remove partial Sol'n, make state be prevQueens. convert prevQueens to List<string> to return it
+                List<string> temp = new List<string>();
+                
+                foreach (var prevQueen in prevQueens)
+                {
+                    StringBuilder values = new StringBuilder();
+                    for (int i = 0; i < n; i++) values.Append(".");
+                    values[prevQueen] = 'Q';
+                    temp.Add(values.ToString());
+                }
+                
+                chessBoard.Add(temp);
                 return;
             } 
-
-            StringBuilder values = new StringBuilder();
-
-            for (int i = 0; i < n; i++) values.Append(".");
 
             for (int i = 0; i < n; i++)
             {
                 if (!IsPossiblePlacement(y, prevQueens, i)) continue;
-
-                values[i] = 'Q';
                 prevQueens[y] = i;
-
-                partialSolution.Add(values.ToString());
-
-                AddQueens(n, chessBoard, partialSolution, prevQueens, y + 1);
+                AddQueens(n, chessBoard, prevQueens, y + 1);
                 prevQueens[y] = -1;
-                values[i] = '.';
-                partialSolution.RemoveAt(partialSolution.Count - 1);
-
-                // at end i hits 4, no solutions found, and returns and exits code
             }
 
         }
@@ -71,10 +67,7 @@ namespace Algorithms.Algorithms.LeetCode_Hard
             foreach (var prevQueenX in prevQueens)
             {
                 if (prevQueenX == -1) return true;
-                if (prevQueenX == currX) return false;
-                
-                if (Math.Abs(prevY - currY) == Math.Abs(prevQueenX - currX)) return false;
-
+                if (prevQueenX == currX || Math.Abs(prevY - currY) == Math.Abs(prevQueenX - currX)) return false;
                 prevY++;
             }
 
