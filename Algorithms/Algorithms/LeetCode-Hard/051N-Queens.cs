@@ -6,19 +6,19 @@ namespace Algorithms.Algorithms.LeetCode_Hard
 {
     class _051N_Queens
     {
-        public static void Main()
-        {
-            int n = 4;
+        //public static void Main()
+        //{
+        //    int n = 4;
 
-            var result = SolveNQueens(n);
+        //    var result = SolveNQueens(n);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+        //    foreach (var item in result)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
 
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
 
         public static IList<IList<string>> SolveNQueens(int n)
         {
