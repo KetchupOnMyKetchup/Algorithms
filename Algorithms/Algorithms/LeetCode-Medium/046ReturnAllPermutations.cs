@@ -7,24 +7,24 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _046ReturnAllPermutations
     {
-        public static void Main()
-        {
-            int[] nums = { 1, 2, 3 };
+        //public static void Main()
+        //{
+        //    int[] nums = { 1, 2, 3 };
 
-            var results = Permute(nums);
+        //    var results = Permute(nums);
 
-            foreach (var items in results)
-            {
-                Console.WriteLine("break");
+        //    foreach (var items in results)
+        //    {
+        //        Console.WriteLine("break");
 
-                foreach (var item in items)
-                {
-                    Console.WriteLine(item);
-                }
-            }
+        //        foreach (var item in items)
+        //        {
+        //            Console.WriteLine(item);
+        //        }
+        //    }
 
-            Console.ReadLine();
-        }
+        //    Console.ReadLine();
+        //}
 
       
         public static IList<IList<int>> Permute(int[] nums)
