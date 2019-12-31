@@ -7,48 +7,35 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _518CoinChange
     {
-        public static void Main()
-        {
-            int[] coins = { 1, 2, 5 };
-            int amount = 5;
+        //public static void Main()
+        //{
+        //    int[] coins = { 1, 2, 5 };
+        //    int amount = 5;
 
-            var results = Change(amount, coins);
+        //    var results = Change(amount, coins);
 
-            Console.WriteLine(results);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(results);
+        //    Console.ReadLine();
+        //}
 
+        // https://www.youtube.com/watch?time_continue=1&v=jaNZ83Q3QGc
         public static int Change(int amount, int[] coins)
         {
-            var finalList = new List<IList<int>>();
-            ScoreCombinations(finalList, new List<int>(), amount, coins); ;
-            return finalList.Count;
-        }
+            int[] dp = new int[amount + 1];
+            dp[0] = 1;
 
-        private static void ScoreCombinations(List<IList<int>> finalList, List<int>partialList, int amount, int[] coins)
-        {
-            if (amount <= 0)
+            foreach (var coin in coins)
             {
-                if (amount == 0)
+                for (int i = 1; i <= amount; i++)
                 {
-                    var tempList = new List<int>(partialList);
-                    tempList.Sort();
-
-
-                    finalList.Add(tempList);
+                    if (i - coin >= 0)
+                    {
+                        dp[i] += dp[i - coin];
+                    }
                 }
-                return;
             }
 
-            for (int i = 0; i < coins.Length; i++)
-            {
-                amount -= coins[i];
-                partialList.Add(coins[i]);
-                ScoreCombinations(finalList, partialList, amount, coins);
-                amount += coins[i];
-                partialList.RemoveAt(partialList.Count - 1);
-            }
-
+            return dp[amount];
         }
     }
 }

@@ -9,11 +9,8 @@ using System.Text;
 
 namespace Algorithms
 {
-    
     class Program
     {
-
-
         //static void Main(string[] args)
         //{
         //    var result = Reverse(-121);
