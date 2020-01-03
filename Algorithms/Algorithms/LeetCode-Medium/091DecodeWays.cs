@@ -8,7 +8,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     {
         public static void Main()
         {
-            var result = NumDecodings("12");
+            var result = NumDecodings("226");
 
             Console.WriteLine(result);
             Console.ReadLine();
@@ -68,26 +68,17 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 
         private static void Backtrack(string s, int startIndex, StringBuilder partialString, List<string> list, char[] charArr)
         {
-            if (startIndex == s.Length)
-            {
-                string temp = partialString.Remove(partialString.Length - 1, 1).ToString();
-                list.Add(temp);
-                return;
-            }
+            if (startIndex == s.Length) list.Add(partialString.ToString());
 
             for (int i = 1; i <= 2; i++)
             {
-                // check if <= 26
-                string temp = s.Substring(startIndex, i);
-                int num = int.Parse(temp);
+                if (startIndex + i > s.Length) continue;
+                int num = int.Parse(s.Substring(startIndex, i));
 
-                if (num <= 26) partialString.Append(charArr[num] + " ");
-                else i = 0;
-
+                if (num <= 26) partialString.Append(charArr[num]);
                 Backtrack(s, startIndex + i, partialString, list, charArr);
-
+                if (num <= 26) partialString.Remove(partialString.Length - 1, 1);
             }
-
         }
     }
 }
