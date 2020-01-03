@@ -6,13 +6,13 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _091DecodeWays
     {
-        public static void Main()
-        {
-            var result = NumDecodings("226");
+        //public static void Main()
+        //{
+        //    var result = NumDecodings("226");
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         /// <summary>
         /// Dynamic Programming method for getting count only
