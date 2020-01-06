@@ -13,20 +13,20 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     /// </summary>
     class _435NonOverlappingIntervals
     {
-        public static void Main()
-        {
-            int[][] intervals = new int[4][]
-            {
-                new int[] { 1, 2 },
-                new int[] { 2, 3 },
-                new int[] { 3, 4 },
-                new int[] { 1, 3 }
-            };
-            var result = EraseOverlapIntervals(intervals);
+        //public static void Main()
+        //{
+        //    int[][] intervals = new int[4][]
+        //    {
+        //        new int[] { 1, 2 },
+        //        new int[] { 2, 3 },
+        //        new int[] { 3, 4 },
+        //        new int[] { 1, 3 }
+        //    };
+        //    var result = EraseOverlapIntervals(intervals);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         public static int EraseOverlapIntervals(int[][] intervals)
         {
@@ -52,7 +52,8 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     {
         public override int Compare(int[] x, int[] y)
         {
-            return x[1] - y[1];
+            return x[1].CompareTo(y[1]);
+            //return x[1] - y[1];
         }
     }
 }
