@@ -6,20 +6,20 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _130SurroundedRegions
     {
-        public static void Main()
-        {
-            char[][] board = new char[3][]
-            {
-                new char[3]{ 'O', 'O', 'O' },
-                new char[3]{ 'O', 'O', 'O' },
-                new char[3]{ 'O', 'O', 'O' }
-            };
+        //public static void Main()
+        //{
+        //    char[][] board = new char[3][]
+        //    {
+        //        new char[3]{ 'O', 'O', 'O' },
+        //        new char[3]{ 'O', 'O', 'O' },
+        //        new char[3]{ 'O', 'O', 'O' }
+        //    };
 
-            Solve(board);
+        //    Solve(board);
 
-            //Console.WriteLine();
-            Console.ReadLine();
-        }
+        //    //Console.WriteLine();
+        //    Console.ReadLine();
+        //}
 
         public static void Solve(char[][] board)
         {
