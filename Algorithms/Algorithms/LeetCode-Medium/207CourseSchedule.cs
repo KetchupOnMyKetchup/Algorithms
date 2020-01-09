@@ -4,21 +4,25 @@ using System.Text;
 
 namespace Algorithms.Algorithms.LeetCode_Medium
 {
+    // This solution makes the most sense: https://leetcode.com/problems/course-schedule/discuss/58713/OO-easy-to-read-java-solution
     class _207CourseSchedule
     {
-        public static void Main()
-        {
-            int[][] prerequisites = new int[2][]
-            {
-                new int[2]{ 2, 0 },
-                new int[2]{ 2, 1 }
-            };
+        //public static void Main()
+        //{
+        //    int[][] prerequisites = new int[5][]
+        //    {
+        //        new int[2]{ 2, 0 },
+        //        new int[2]{ 2, 1 },
+        //        new int[2]{ 3, 2 },
+        //        new int[2]{ 4, 3 },
+        //        new int[2]{ 2, 3 }
+        //    };
 
-            var result = CanFinish(3, prerequisites);
+        //    var result = CanFinish(5, prerequisites);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
         
         class Course
         {
@@ -32,10 +36,10 @@ namespace Algorithms.Algorithms.LeetCode_Medium
         }
         private static bool isCyclic(Course cur)
         {
-            if (cur.tested == true) return false;
-            if (cur.visited == true) return true;
-            cur.visited = true;
-            foreach (Course c in cur.pre)
+            if (cur.tested == true) return false; // If not tested yet, but has been visited, in loop because visited is first
+            if (cur.visited == true) return true;  // if visited already then we're now in a loop
+            cur.visited = true; // set to true before going in loop
+            foreach (Course c in cur.pre) // can go from curr = 2, see 3 as pre-req.. 3 has 2 as a pre-req but 2 .visited = true and tested = false.. so will fail and show cyclic
             {
                 if (isCyclic(c)) // recursive call
                 {
@@ -55,7 +59,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             }
             for (int i = 0; i < prerequisites.Length; i++)
             {
-                courses[prerequisites[i][0]].add(courses[prerequisites[i][1]]); // add pre-reqs
+                courses[prerequisites[i][0]].add(courses[prerequisites[i][1]]); // add pre-reqs, reference existing object
             }
             for (int i = 0; i < numCourses; i++)
             {
