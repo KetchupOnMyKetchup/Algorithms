@@ -9,23 +9,26 @@ namespace Algorithms.Algorithms.LeetCode_Hard
     {
         public static void Main()
         {
-            string[] words = new string[] { "foo", "bar", "the" };
-            var result = FindSubstring("barfoofoobarthefoobarman", words);
+            string[] words = new string[] { "word", "good", "best", "good" };
+            var result = FindSubstring("wordgoodgoodgoodbestword", words);
 
             Console.WriteLine(result);
             Console.ReadLine();
         }
 
+        // Working solution but too slow, passes 148/170 tests but not all
         public static IList<int> FindSubstring(string s, string[] words)
         {
+            List<int> list = new List<int>();
+
+            if (string.IsNullOrEmpty(s) || words.Length == 0) return list;
+
             HashSet<int> possibleHashes = new HashSet<int>();
             GetAllWordCombinations(possibleHashes, words.ToList(), new List<string>());
 
             int hashLength = words[0].Length * words.Length;
 
-            List<int> list = new List<int>();
-
-            for (int i = 0; i < s.Length - hashLength; i++)
+            for (int i = 0; i <= s.Length - hashLength; i++)
             {
                 string substring = s.Substring(i, hashLength);
                 int tempHash = substring.GetHashCode();
@@ -52,7 +55,7 @@ namespace Algorithms.Algorithms.LeetCode_Hard
 
                 GetAllWordCombinations(possibleHashes, words, tempList);
                 
-                words.Insert(0, tempList[tempList.Count - 1]);
+                words.Insert(i, tempList[tempList.Count - 1]);
                 tempList.RemoveAt(tempList.Count - 1);
             }
 
