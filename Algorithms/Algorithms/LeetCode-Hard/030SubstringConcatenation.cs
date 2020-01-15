@@ -7,14 +7,14 @@ namespace Algorithms.Algorithms.LeetCode_Hard
 {
     class _030SubstringConcatenation
     {
-        public static void Main()
-        {
-            string[] words = new string[] { "word", "good", "best", "good" };
-            var result = FindSubstring("wordgoodgoodgoodbestword", words);
+        //public static void Main()
+        //{
+        //    string[] words = new string[] { "word", "good", "best", "good" };
+        //    var result = FindSubstring("wordgoodgoodgoodbestword", words);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         // Working solution but too slow, passes 148/170 tests but not all
         public static IList<int> FindSubstring(string s, string[] words)
