@@ -24,10 +24,24 @@ namespace Algorithms.Algorithms.LeetCode_Easy
         //    Console.ReadLine();
         //}
 
+        static int maxPath = 1;
+
         public static int DiameterOfBinaryTree(TreeNode root)
         {
+            LongestPath(root);
+            return maxPath;
+        }
 
-            return 0;
+        private static int LongestPath(TreeNode curr)
+        {
+            if (curr == null) return 0;
+
+            int left = LongestPath(curr.left);
+            int right = LongestPath(curr.right);
+
+            maxPath = Math.Max(maxPath, left + right);
+
+            return Math.Max(left, right) + 1;
         }
     }
 }

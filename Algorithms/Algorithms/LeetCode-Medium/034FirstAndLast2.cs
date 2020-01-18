@@ -6,14 +6,14 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class _034FirstAndLast2
     {
-        public static void Main()
-        {
-            int[] nums = new int[] { 5, 7, 7, 8, 8, 10 };
-            var result = SearchRange(nums, 6); // *if it doesn't work ? like with 6??
+        //public static void Main()
+        //{
+        //    int[] nums = new int[] { 5, 7, 7, 8, 8, 10 };
+        //    var result = SearchRange(nums, 6); // *if it doesn't work ? like with 6??
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         public static int[] SearchRange(int[] nums, int target)
         {
