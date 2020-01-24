@@ -12,6 +12,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             public TreeNode left;
             public TreeNode right;
             public TreeNode(int x) { val = x; }
+
         }
 
         public static bool IsValidBST(TreeNode root)
@@ -45,5 +46,23 @@ namespace Algorithms.Algorithms.LeetCode_Medium
         //    Console.WriteLine(IsValidBST(root));
         //    Console.ReadLine();
         //}
+
+
+        public class Person
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public int Age { get; set; }
+
+            public string FullName()
+            {
+                return FirstName + LastName;
+            }
+
+            public int ConvertAgeToDogYears()
+            {
+                return Age * 7;
+            }
+        }
     }
 }

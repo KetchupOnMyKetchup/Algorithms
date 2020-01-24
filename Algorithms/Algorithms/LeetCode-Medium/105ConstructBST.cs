@@ -14,16 +14,16 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             public TreeNode(int x) { val = x; }
         }
 
-        public static void Main()
-        {
-            int[] preorder = { 3, 9, 20, 15, 7 }; // node, left right
-            int[] inorder = { 9, 3, 15, 20, 7 }; // left, node, right
+        //public static void Main()
+        //{
+        //    int[] preorder = { 3, 9, 20, 15, 7 }; // node, left right
+        //    int[] inorder = { 9, 3, 15, 20, 7 }; // left, node, right
 
-            var result = BuildTree(preorder, inorder); 
+        //    var result = BuildTree(preorder, inorder); 
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
         public static TreeNode BuildTree(int[] preorder, int[] inorder)
         {

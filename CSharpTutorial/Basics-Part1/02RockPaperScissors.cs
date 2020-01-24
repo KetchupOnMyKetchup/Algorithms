@@ -11,26 +11,31 @@ namespace CSharpTutorial
 
         public void Run()
         {
-            bool continueGame = true;
-
+            // Welcome to game
             Console.WriteLine("Welcome to RPS game");
-
+            
+            // while loop for game to run
+            bool continueGame = true;
             while (continueGame)
             {
+                // Ask user for choice 
                 Console.WriteLine("Type number for your selection:\n1-->ROCK\n2-->PAPER\n3-->SCISSOR");
                 string[] choices = new string[3] { "ROCK", "PAPER", "SCISSOR" };
-
                 Console.WriteLine("Enter your choice:");
                 int user = int.Parse(Console.ReadLine()) - 1;
-
-                Console.WriteLine("You chose:" + choices[user]);
-
+                
+                // Computer makes selection
                 Random rnd = new Random();
                 int n = rnd.Next(0, 3);
+                
+                // Print user + computer choice
+                Console.WriteLine("You chose:" + choices[user]);
                 Console.WriteLine("Computer:" + choices[n]);
 
+                // Determine winner + print winner
                 FindWinner(user, n);
                 
+                // Ask for continue or end
                 Console.WriteLine("Do you want to continue(Y/N):");
                 if (Console.ReadLine().ToUpper() != "Y") continueGame = false;
                 Console.WriteLine("---------------------------------------");
