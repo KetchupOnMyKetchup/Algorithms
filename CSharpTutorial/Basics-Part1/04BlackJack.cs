@@ -10,7 +10,7 @@ namespace CSharpTutorial.Basics_Part1
     /// Not accounting for computer ability to hit
     /// Will implement these in secondary version
     /// </summary>
-    class _04BlackJack
+    public class BlackJack
     {
         public static void Main()
         {
@@ -75,7 +75,7 @@ namespace CSharpTutorial.Basics_Part1
             return cardValue;
         }
 
-        private static int AddCardValueToScore(string card)
+        public static int AddCardValueToScore(string card)
         {
             if (card.Contains("Ace")) return 1;
             if (card.Contains("2")) return 2;
@@ -91,7 +91,7 @@ namespace CSharpTutorial.Basics_Part1
             return 0;
         }
 
-        private static List<string> GenerateDeck()
+        public static List<string> GenerateDeck()
         {
             List<string> deck = new List<string>();
 
