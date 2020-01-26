@@ -14,26 +14,26 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             public TreeNode(int x) { val = x; }
         }
 
-        public static void Main()
-        {
-            TreeNode root = new TreeNode(4);
-            root.left = new TreeNode(2);
-            root.right = new TreeNode(7);
-            root.left.left = new TreeNode(1);
-            root.left.right = new TreeNode(3);
+        //public static void Main()
+        //{
+        //    TreeNode root = new TreeNode(4);
+        //    root.left = new TreeNode(2);
+        //    root.right = new TreeNode(7);
+        //    root.left.left = new TreeNode(1);
+        //    root.left.right = new TreeNode(3);
 
-            var result = InsertIntoBST(root, 5);
+        //    var result = InsertIntoBST(root, 5);
 
-            Console.WriteLine(result);
-            Console.ReadLine();
-        }
+        //    Console.WriteLine(result);
+        //    Console.ReadLine();
+        //}
 
+        // https://www.geeksforgeeks.org/insert-a-node-in-binary-search-tree-iteratively/
+        // When inserting into BST, you will always insert it at the bottom as a leaf. 
+        // You will not be re-arranging tree
         public static TreeNode InsertIntoBST(TreeNode root, int val)
         {
-            if (root == null)
-            {
-
-            }
+            if (root == null) return new TreeNode(val);
             
             if (val > root.val)
             {
