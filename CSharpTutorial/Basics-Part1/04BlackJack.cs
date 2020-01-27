@@ -14,18 +14,21 @@ namespace CSharpTutorial.Basics_Part1
     {
         public static void Main()
         {
+            // welcome
             Console.WriteLine("Welcome to blackjack! Would you like to play against the computer?");
 
             bool isGameOn = true;
 
             while (isGameOn)
             {
-                Console.WriteLine("Dealing starting cards?");
+                Console.WriteLine("Dealing cards.");
                 var deck = GenerateDeck();
 
+                // set score to 0
                 var userScore = 0;
                 var compScore = 0;
 
+                // deal initial cards
                 userScore += DealCard(deck, true, "User");
                 userScore += DealCard(deck, true, "User");
                 compScore += DealCard(deck, false, "Comp");
@@ -33,6 +36,7 @@ namespace CSharpTutorial.Basics_Part1
 
                 Console.WriteLine("Do you want to hit?");
 
+                // additional hits
                 bool hit = true;
                 while (hit)
                 {
@@ -47,6 +51,7 @@ namespace CSharpTutorial.Basics_Part1
                     Console.WriteLine("Do you want to hit again?");
                 }
 
+                // final compare
                 if (userScore <= 21)
                 {
                     if (userScore > compScore) Console.WriteLine("User wins!");
