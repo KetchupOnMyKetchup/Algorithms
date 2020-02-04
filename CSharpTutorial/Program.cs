@@ -7,6 +7,10 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
+            // --------------------------------------------------------
+            // BASICS PART 1
+            // --------------------------------------------------------
+            
             // Project 1: Intro and Fizz Buzz Problem
             FizzBuzz fizzBuzz = new FizzBuzz();
             fizzBuzz.Run();
@@ -45,6 +49,10 @@ namespace CSharpTutorial
 
 
             // Work on HW 3, see solution class if needed
+
+            // --------------------------------------------------------
+            // BASICS PART 2
+            // --------------------------------------------------------
 
         }
     }
