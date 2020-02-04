@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpTutorial.Basics_Part1
+namespace CSharpTutorial
 {
-    class _03IntroCollections
+    public class Marbles
     {
-        static void Main()
+        public void Run()
         {
             // Tell user we can get bags for marbles, ask how many bags they want to get
             Console.WriteLine("We can get bags of marbles. How many bags would you like?");
