@@ -10,9 +10,10 @@ namespace CSharpTutorial.Homework
     /// </summary>
     class Hw2
     {
-        // Write a method called ChangeNum that returns an int and takes in nothing
+        // Below this line, write a method called ChangeNum that returns an int of value 2 and takes in nothing
 
-        // Write a method called ChangeNum2 that returns an int and takes in an int
+
+        // Below this line, write a method called ChangeNum2 that returns an int of value 3 and takes in an int
 
 
         // Uncomment the below to debug the DoWork Method to test
@@ -23,7 +24,7 @@ namespace CSharpTutorial.Homework
 
         public static void DoWork()
         {
-            // Set a variable called num of type integer to 10
+            // Initialize a new variable called num of type integer to 1
 
 
             // What value is num now?
@@ -37,18 +38,17 @@ namespace CSharpTutorial.Homework
             // Answer:
 
 
-            // Set your variable num equal to the ChangeNum method
+            // Set your exisiting variable num (do NOT create a new variable) equal to the ChangeNum method
 
 
             // What value will num be now?
             // Answer:
 
 
-            // Write a variable called num2 and set it equal to 99
-            // Write a variable called num3 and set it equal to 500
+            // Write a variable called num2 and set it equal to 4
 
 
-            // Call your ChangeNum2 method and pass in num2, do not assign the method to a variable
+            // Call your ChangeNum2 method and pass in num2 as a parameter, do not assign the method to a variable
 
 
             // What value will num be now?
@@ -60,6 +60,9 @@ namespace CSharpTutorial.Homework
 
             // What value will num be now?
             // Answer:
+
+
+            // Write a variable called num3 and set it equal to 4
 
 
             // Set your variable num equal to num3. 
