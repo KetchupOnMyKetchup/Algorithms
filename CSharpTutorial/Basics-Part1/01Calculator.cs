@@ -6,7 +6,7 @@ namespace CSharpTutorial
 {
     public class Calculator
     {
-        static void Run()
+        public void Run()
         {
             Console.WriteLine("Enter your first number");
             string input1 = Console.ReadLine();

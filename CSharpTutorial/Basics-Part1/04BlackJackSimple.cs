@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpTutorial.Basics_Part1
+namespace CSharpTutorial
 {
     /// <summary>
     /// Simple blackjack tutorial with no classes
@@ -10,9 +10,9 @@ namespace CSharpTutorial.Basics_Part1
     /// Not accounting for computer ability to hit
     /// Will implement these in secondary version
     /// </summary>
-    public class BlackJack
+    public class BlackJackSimple
     {
-        public static void Main()
+        public void Run()
         {
             // welcome
             Console.WriteLine("Welcome to blackjack! Would you like to play against the computer?");
