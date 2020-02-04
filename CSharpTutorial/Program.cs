@@ -20,12 +20,19 @@ namespace CSharpTutorial
             ticTacToe.Run();
 
             // Work on HW 1
+            // Work on HW 2
 
             // Project 4
             BlackJackSimple blackJackSimple = new BlackJackSimple();
             blackJackSimple.Run();
 
-            // Work on HW 2
+            // Project 5
+            // See how a method was created to avoid replicating work. 
+            // Lines with refactor are marked with comments.
+            TicTacToeRefactor tttRefactor = new TicTacToeRefactor();
+            tttRefactor.Run();
+
+            // Project 6: Fizz Buzz Variant Problem
 
 
             // Work on HW 3

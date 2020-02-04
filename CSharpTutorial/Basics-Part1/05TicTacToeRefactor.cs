@@ -25,11 +25,13 @@ namespace CSharpTutorial
             {
                 if (isPlayerOne == true)
                 {
+                    // Refactor here
                     PlayerTurn(arr, g, "1", 'o');
                     isPlayerOne = false;
                 }
                 else
                 {
+                    // Refactor here
                     PlayerTurn(arr, g, "2", 'x');
                     isPlayerOne = true;
                 }
@@ -41,6 +43,7 @@ namespace CSharpTutorial
             Console.ReadLine();
         }
 
+        // Refactor here, this method is new to avoid replicating work
         private void PlayerTurn(char[] arr, TTTGameRefactor g, string playerNumber, char choice)
         {
             Console.WriteLine($"Player {playerNumber} choose a number.");
