@@ -13,56 +13,45 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             public ListNode(int x) { val = x; }
         }
 
-        static void Main()
-        {
-            ListNode head = new ListNode(1);
-            head.next = new ListNode(2);
-            head.next.next = new ListNode(2);
-            //head.next.next.next = new ListNode(3);
-            //head.next.next.next.next = new ListNode(4);
-            //head.next.next.next.next.next = new ListNode(4);
-            //head.next.next.next.next.next.next = new ListNode(5);
-            var result = DeleteDuplicates(head);
+        //static void Main()
+        //{
+        //    ListNode head = new ListNode(1);
+        //    head.next = new ListNode(2);
+        //    head.next.next = new ListNode(2);
+        //    //head.next.next.next = new ListNode(3);
+        //    //head.next.next.next.next = new ListNode(4);
+        //    //head.next.next.next.next.next = new ListNode(4);
+        //    //head.next.next.next.next.next.next = new ListNode(5);
+        //    var result = DeleteDuplicates(head);
 
-            while (result.next != null)
-            {
-                Console.WriteLine(result.val);
-                result = result.next;
-            }
+        //    while (result.next != null)
+        //    {
+        //        Console.WriteLine(result.val);
+        //        result = result.next;
+        //    }
            
-        }
+        //}
 
         public static ListNode DeleteDuplicates(ListNode head)
         {
-            int[] remove = new int[100];
+            if (head == null) return null;
+            
+            ListNode dummyHead = new ListNode(0);
+            dummyHead.next = head;
+
+            ListNode prev = dummyHead;
             ListNode curr = head;
 
-            // 2 pass
-            // 1st: remove dupes, add to list
-            while (curr != null) // 1 further?
-            {
-                remove[curr.val]++;
-                curr = curr.next;
-            }
-
-            ListNode dummyHead = new ListNode(0);
-            ListNode prev = dummyHead;
-
-            curr = head;
-
-            //2nd: remove dupes from list
             while (curr != null)
             {
-                if (remove[curr.val] >= 2)
-                {
-                    curr = curr.next;
-                    continue;
-                }
-
-                prev.next = new ListNode(curr.val);
+                while (curr.next != null && curr.val == curr.next.val) curr = curr.next;
+                
+                // reference, its equal if its pointing to the NEXT object in line.. regardless of values being the same or not
+                // if prev.next points to same place in computer as curr does
+                if (prev.next == curr) prev = prev.next;
+                else prev.next = curr.next;
 
                 curr = curr.next;
-                prev = prev.next;
             }
 
             return dummyHead.next;
