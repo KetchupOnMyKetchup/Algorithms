@@ -46,7 +46,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
                 if (Helper(i - 1, j, board, word, charIndex + 1)) return true;
                 board[i][j] = temp;
             }
-
+             
             // down
             if (i < board.Length - 1 && board[i + 1][j] == word[charIndex])
             {
