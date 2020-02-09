@@ -11,31 +11,23 @@ namespace Algorithms.Algorithms.LeetCode_Medium
     /// </summary>
     class WordSearch
     {
-        static void Main()
-        {
-            char[][] board = new char[3][]
-            {
-                new char[] { 'A','B','C','E' },
-                new char[] { 'S','F','C','S' },
-                new char[] { 'A','D','E','E' }
-            };
+        //static void Main()
+        //{
+        //    char[][] board = new char[3][]
+        //    {
+        //        new char[] { 'A','B','C','E' },
+        //        new char[] { 'S','F','C','S' },
+        //        new char[] { 'A','D','E','E' }
+        //    };
 
-            var result = Exist(board, "ABC");
-            Console.WriteLine(result);
-        }
-
-        int[][] dir = new int[4][]
-        {
-            new int[] {-1, 0},
-            new int[] {1, 0},
-            new int[] {-1, 0},
-            new int[] {-1, 0}
-        }; // use with for loop
+        //    var result = Exist(board, "ABC");
+        //    Console.WriteLine(result);
+        //}
 
         private static bool Helper(int i, int j, char[][] board, string word, int charIndex)
         {
             // Space complexity is O(word.Length) because that's how far deep it can recurse
-            if (word.Length == charIndex) return true; 
+            if (word.Length == charIndex) return true;
 
             char temp = board[i][j];
 
@@ -46,7 +38,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
                 if (Helper(i - 1, j, board, word, charIndex + 1)) return true;
                 board[i][j] = temp;
             }
-             
+
             // down
             if (i < board.Length - 1 && board[i + 1][j] == word[charIndex])
             {
