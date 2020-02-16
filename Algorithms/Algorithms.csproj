@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Algorithms\LeetCode-Review-LongTerm\" />
+    <Folder Include="Algorithms\Top100MS\" />
     <Folder Include="Algorithms\PrincetonPartII\CH2\" />
   </ItemGroup>
 

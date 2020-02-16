@@ -9,43 +9,36 @@ namespace Algorithms.Algorithms.LeetCode_Medium
         public static int MyAtoi(string str)
         {
             if (string.IsNullOrWhiteSpace(str)) return 0;
-            //str = str.Replace(" ", string.Empty); Too slow, iterates through whole thing + extra storage for new string
 
-            int result = 0;
-            bool isNegative = false;
-
+            int multiplyFactor = 1;
             int i = 0;
+            int final = 0;
+
+            // Remove whitespace
             while (i < str.Length && str[i] == ' ') i++;
 
-            if (str[i] == '-')
+            // Handle signs
+            if (str[i] == '-' || str[i] == '+')
             {
-                isNegative = true;
+                multiplyFactor = str[i] == '+' ? 1 : -1;
                 i++;
             }
-            else if (str[i] == '+') i++;
 
-            for (; i < str.Length; i++)
+            // Convert num and handle overflow
+            while (i < str.Length && str[i] >= '0' && str[i] <= '9')
             {
-                if (!char.IsDigit(str[i])) break;
-                else
-                {
-                    int num = str[i] - '0';
+                if (final > int.MaxValue / 10 || final == int.MaxValue / 10 && str[i] - '0' > 7)
+                    return multiplyFactor == -1 ? int.MinValue : int.MaxValue;
 
-                    if (result > int.MaxValue / 10 || result == int.MaxValue / 10 && str[i] - '0' > 7)
-                        return isNegative ? int.MinValue : int.MaxValue;
-
-                    result = (result * 10) + num;
-                }
+                final = (final * 10) + (str[i++] - '0');
             }
 
-            if (isNegative) result *= -1;
-
-            return result;
+            return final * multiplyFactor;
         }
 
         //public static void Main()
         //{
-        //    Console.WriteLine(MyAtoi("   "));
+        //    Console.WriteLine(MyAtoi("+"));
         //    Console.ReadLine();
         //}
     }

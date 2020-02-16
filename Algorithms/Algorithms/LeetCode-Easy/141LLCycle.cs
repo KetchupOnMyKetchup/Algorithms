@@ -16,17 +16,17 @@ namespace Algorithms.Algorithms.LeetCode_Easy
             }
         }
 
-        static void Main()
-        {
-            ListNode node = new ListNode(3);
-            node.next = new ListNode(2);
-            node.next.next = new ListNode(0);
-            node.next.next.next = new ListNode(4);
-            node.next.next.next.next = node.next;
+        //static void Main()
+        //{
+        //    ListNode node = new ListNode(3);
+        //    node.next = new ListNode(2);
+        //    node.next.next = new ListNode(0);
+        //    node.next.next.next = new ListNode(4);
+        //    node.next.next.next.next = node.next;
 
-            var result = HasCycle(node);
-            Console.WriteLine(result);
-        }
+        //    var result = HasCycle(node);
+        //    Console.WriteLine(result);
+        //}
 
         public static bool HasCycle(ListNode head)
         {
