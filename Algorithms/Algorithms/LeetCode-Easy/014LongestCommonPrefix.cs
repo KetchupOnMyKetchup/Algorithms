@@ -53,7 +53,7 @@ namespace Algorithms.Algorithms.LeetCode_Easy
 
             return true;
         }
-
+        
 
         //public static string LongestCommonPrefix(string[] strs)
         //{
