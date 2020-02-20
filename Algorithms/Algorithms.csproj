@@ -6,15 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Algorithms\LeetCode\**" />
-    <EmbeddedResource Remove="Algorithms\LeetCode\**" />
-    <None Remove="Algorithms\LeetCode\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Algorithms\LeetCode-Review-LongTerm\" />
-    <Folder Include="Algorithms\Top100MS\" />
-    <Folder Include="Algorithms\PrincetonPartII\CH2\" />
+    <Folder Include="LeetCode-Review-LongTerm\" />
   </ItemGroup>
 
   <ItemGroup>
