@@ -6,11 +6,11 @@ namespace Algorithms.Algorithms.LeetCode_Medium
 {
     class GroupAnagrams1
     {
-        static void Main()
-        {
-            string[] strs = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
-            var result = GroupAnagrams(strs);
-        }
+        //static void Main()
+        //{
+        //    string[] strs = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+        //    var result = GroupAnagrams(strs);
+        //}
 
 
         public static IList<IList<string>> GroupAnagrams(string[] strs)
