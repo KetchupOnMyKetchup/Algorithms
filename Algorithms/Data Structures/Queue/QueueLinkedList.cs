@@ -7,26 +7,26 @@ namespace Algorithms.Queue
 {
     public class QueueLinkedList
     {
-        Node front;
-        Node rear;
+        Node head;
+        Node tail;
 
         public QueueLinkedList()
         {
-            this.front = this.rear = null;
+            this.head = this.tail = null;
         }
 
         public void Enqueue(int item)
         {
             Node newNode = new Node(item);
 
-            if (this.rear == null)
+            if (this.tail == null)
             {
-                this.front = this.rear = newNode;
+                this.head = this.tail = newNode;
             }
             else
             {
-                this.rear.next = newNode;
-                this.rear = newNode;
+                this.tail.next = newNode;
+                this.tail = newNode;
             }
 
             Console.WriteLine("{0} inserted into Queue", item);
@@ -35,20 +35,20 @@ namespace Algorithms.Queue
         public void Dequeue()
         {
             // If queue is empty, return NULL.  
-            if (this.front == null)
+            if (this.head == null)
             {
                 Console.WriteLine("The Queue is empty");
                 return;
             }
 
             // Store previous front and move front one node ahead  
-            Node temp = this.front;
-            this.front = this.front.next;
+            Node temp = this.head;
+            this.head = this.head.next;
 
             // If front becomes NULL, then change rear also as NULL  
-            if (this.front == null)
+            if (this.head == null)
             {
-                this.rear = null;
+                this.tail = null;
             }
 
             Console.WriteLine("Item deleted is {0}", temp.data);

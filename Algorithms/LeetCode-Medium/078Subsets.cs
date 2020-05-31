@@ -10,7 +10,7 @@ namespace Algorithms.Algorithms.LeetCode_Medium
         //public static void Main()
         //{
         //    int[] nums = { 3, 2, 1 };
-            
+
         //    var results = Subsets(nums);
 
         //    foreach (var items in results)
@@ -45,5 +45,6 @@ namespace Algorithms.Algorithms.LeetCode_Medium
                 tempList.RemoveAt(tempList.Count - 1);
             }
         }
+
     }
 }
