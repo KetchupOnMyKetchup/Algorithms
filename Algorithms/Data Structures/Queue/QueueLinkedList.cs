@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Algorithms.Queue
 {
+    /// <summary>
+    /// LL with a queue
+    /// </summary>
     public class QueueLinkedList
     {
         Node head;

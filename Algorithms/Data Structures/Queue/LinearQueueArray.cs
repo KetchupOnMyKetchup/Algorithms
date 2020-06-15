@@ -6,6 +6,7 @@ namespace Algorithms.Queue
 {
     // Linear Queue Array
     // https://www.includehelp.com/dot-net/implement-linear-queue-using-array-using-c-sharp-program.aspx
+    //
     public class LinearQueueArray
     {
         private int[] array;
