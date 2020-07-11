@@ -32,39 +32,71 @@ namespace Algorithms.Algorithms.LeetCode_Medium
             { '9', "wxyz" },
         };
 
-
         public static IList<string> LetterCombinations(string digits)
         {
-            List<string> finalResult = new List<string>();
+            // call helper
+            List<string> result = new List<string>();
+            if (digits.Length == 0) return result;
 
-            if (digits.Length == 0) return finalResult;
+            Helper(result, digits, 0, new StringBuilder());
 
-            BackTrack(finalResult, digits, 0, new StringBuilder(""));
-
-            return finalResult;
+            return result;
         }
 
-        public static void BackTrack(List<string> finalResult, string digits, int currentIndex, StringBuilder partialMnemonic)
+        // make helper: result, digits, index am on, temp string
+        public static void Helper(List<string> result, string digits, int index, StringBuilder temp)
         {
-            // Constraints: we could run out of numbers
-            // if no letters left, return
-            if (currentIndex == digits.Length)
+            // length to stop at and add to result string
+            if (index == digits.Length)
             {
-                finalResult.Add(partialMnemonic.ToString());
+                result.Add(temp.ToString());
                 return;
             }
+            // for loop
+            string currLetters = dict[digits[index]];
 
-            // Choice: one letter at a time per #
-            foreach (var letter in dict[digits[currentIndex]])
+            for (int j = 0; j < currLetters.Length; j++)
             {
-                partialMnemonic.Append(letter);
-
-                BackTrack(finalResult, digits, currentIndex + 1, partialMnemonic);
-
-                partialMnemonic.Remove(partialMnemonic.Length - 1, 1);
+                temp.Append(currLetters[j]);
+                Helper(result, digits, index + 1, new StringBuilder());
+                temp.Remove(temp.Length - 1, 1);
             }
 
-            // Goal: Get full list of letters possible
         }
+
+
+        //public static IList<string> LetterCombinations(string digits)
+        //{
+        //    List<string> finalResult = new List<string>();
+
+        //    if (digits.Length == 0) return finalResult;
+
+        //    BackTrack(finalResult, digits, 0, new StringBuilder(""));
+
+        //    return finalResult;
+        //}
+
+        //public static void BackTrack(List<string> finalResult, string digits, int currentIndex, StringBuilder partialMnemonic)
+        //{
+        //    // Constraints: we could run out of numbers
+        //    // if no letters left, return
+        //    if (currentIndex == digits.Length)
+        //    {
+        //        finalResult.Add(partialMnemonic.ToString());
+        //        return;
+        //    }
+
+        //    // Choice: one letter at a time per #
+        //    foreach (var letter in dict[digits[currentIndex]])
+        //    {
+        //        partialMnemonic.Append(letter);
+
+        //        BackTrack(finalResult, digits, currentIndex + 1, partialMnemonic);
+
+        //        partialMnemonic.Remove(partialMnemonic.Length - 1, 1);
+        //    }
+
+        //    // Goal: Get full list of letters possible
+        //}
     }
 }
