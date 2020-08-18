@@ -15,7 +15,7 @@ namespace Algorithms.Review
         // Given a byte array stream from a path, find out if a byte[] is found in it, true or false
         public bool FindBytesInFile(string path, byte[] pattern)
         {
-            int index = 0;
+            int patternIndex = 0;
             byte current;
 
             using (BinaryReader br = new BinaryReader(File.OpenRead(path)))
@@ -24,15 +24,15 @@ namespace Algorithms.Review
                 while (bs.Position < bs.Length)
                 {
                     current = br.ReadByte();
-                    if (current == pattern[index])
+                    if (current == pattern[patternIndex])
                     {
-                        index++;
-                        if (index == pattern.Length) return true;
+                        patternIndex++;
+                        if (patternIndex == pattern.Length) return true;
                     }
                     else
                     {
-                        if (index > 0)
-                            index = LookBack(index, pattern, current);
+                        if (patternIndex > 0)
+                            patternIndex = LookBack(patternIndex, pattern, current);
                     }
                 }
             }
@@ -42,26 +42,26 @@ namespace Algorithms.Review
 
         private int LookBack(int length, byte[] pattern, byte current)
         {
-            byte[] file = new byte[length];
-            for (int i = 0; i < length; i++)
-                file[i] = pattern[i + 1];
-            file[length - 1] = current;
+            byte[] ruler = new byte[length];
+            for (int i = 0; i < length - 1; i++)
+                ruler[i] = pattern[i + 1];
+            ruler[length - 1] = current;
 
             int start = 0;
-            int fileIndex = start;
+            int rulerIndex = 0;
             int pattIndex = 0;
 
-            while (fileIndex < length)
+            while (rulerIndex < length)
             {
-                if (file[fileIndex] == pattern[pattIndex])
+                if (ruler[rulerIndex] == pattern[pattIndex])
                 {
-                    fileIndex++;
+                    rulerIndex++;
                     pattIndex++;
                 }
                 else
                 {
                     start++;
-                    fileIndex = start;
+                    rulerIndex = start;
                     pattIndex = 0;
                 }
             }
